@@ -1,0 +1,65 @@
+body{
+
+    background:#0a0c11;
+
+    color:white;
+
+}
+
+.cart-header{
+
+    padding:140px 0 60px;
+   
+    background:black;
+
+}
+
+.cart-item{
+
+    background:#0c0e11;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    margin-bottom:20px;
+
+}
+
+.cart-item img{
+
+    width:120px;
+
+    border-radius:12px;
+
+}
+
+.summary-card{
+
+    background:#0b0e11;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    position:sticky;
+
+    top:100px;
+
+}
+
+.remove-btn{
+
+    color:red;
+
+    cursor:pointer;
+
+}
+
+.qty-btn{
+
+    width:35px;
+
+    height:35px;
+
+}

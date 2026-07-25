@@ -1,0 +1,565 @@
+/*=========================================================
+    GLOBAL STYLES
+=========================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#050609;
+
+    color:#fff;
+
+}
+
+/*=========================================================
+    NAVBAR
+=========================================================*/
+
+.navbar{
+
+    background:#050609;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+
+    padding:15px 0;
+
+}
+
+.navbar-brand{
+
+    font-size:1.4rem;
+
+    font-weight:700;
+
+}
+
+.nav-link{
+
+    color:#fff !important;
+
+    margin-left:15px;
+
+    transition:.3s;
+
+}
+
+.nav-link:hover{
+
+    color:#f4d367 !important;
+
+}
+
+/*=========================================================
+    HERO SECTION
+=========================================================*/
+
+.shop-hero{
+
+    padding:140px 0 80px;
+
+    text-align:center;
+
+    background:black;
+
+}
+
+.shop-hero h1{
+
+    font-size:3rem;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+.shop-hero p{
+
+    color:#cbd5e1;
+
+    max-width:650px;
+
+    margin:auto;
+
+}
+
+/*=========================================================
+    SEARCH AREA
+=========================================================*/
+
+.form-control,
+.form-select{
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:black;
+
+    color:white;
+
+}
+
+.form-control::placeholder{
+
+    color:#d3dbe3;
+
+}
+
+.form-control:focus,
+.form-select:focus{
+
+    background:#0b0e12;
+
+    color:white;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+
+}
+
+/*=========================================================
+    PRODUCT CARD
+=========================================================*/
+
+.product-card{
+
+    background:#050709;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+
+    height:100%;
+
+}
+
+.product-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 15px 30px rgba(250,204,21,.25);
+
+}
+
+.product-image{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+}
+
+.product-body{
+
+    padding:20px;
+
+}
+
+.product-title{
+
+    font-size:1.3rem;
+
+    font-weight:600;
+
+}
+
+.product-description{
+
+    color:#cbd5e1;
+
+    font-size:.92rem;
+
+    margin:12px 0;
+
+    min-height:55px;
+
+}
+
+.product-price{
+
+    color:#f4d367;
+
+    font-size:1.5rem;
+
+    font-weight:bold;
+
+}
+
+.stock{
+
+    display:inline-block;
+
+    margin-top:12px;
+
+    padding:6px 12px;
+
+    background:#f4d367;
+
+    color:#fff;
+
+    border-radius:20px;
+
+    font-size:.8rem;
+
+}
+
+/*=========================================================
+    QUANTITY
+=========================================================*/
+
+.quantity-box{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:20px 0;
+
+    gap:10px;
+
+}
+
+.qty-btn{
+
+    width:38px;
+
+    height:38px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#f4d367;
+
+    color:#111827;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.qty-btn:hover{
+
+    transform:scale(1.1);
+
+}
+
+.qty{
+
+    width:55px;
+
+    text-align:center;
+
+    font-size:18px;
+
+    background:#090b0f;
+
+    border-radius:10px;
+
+    padding:6px;
+
+}
+
+/*=========================================================
+    ADD TO CART BUTTON
+=========================================================*/
+
+.cart-btn{
+
+    width:100%;
+
+    border:none;
+
+    background:#f4d367;
+
+    color:#111827;
+
+    padding:13px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.cart-btn:hover{
+
+    background:#f4d367;
+
+    transform:translateY(-2px);
+
+}
+
+/*=========================================================
+    FOOTER
+=========================================================*/
+
+main-footer{
+
+    background:#050609;
+
+    padding:60px 0 20px;
+
+    color:white;
+
+}
+
+
+
+
+.footer-title{
+
+    color:#f4d367;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.footer-heading{
+
+    color:#f4d367;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+.footer-text{
+
+    color:white;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+/* FOOTER LINKS */
+
+
+.footer-links{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+
+
+.footer-links li{
+
+    margin-bottom:10px;
+
+}
+
+
+
+.footer-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+
+
+.footer-links a:hover{
+
+    color:#f4d367;
+
+    padding-left:5px;
+
+}
+
+
+
+
+
+
+
+/* LOGOS */
+
+
+.footer-logo{
+
+    width:150px;
+
+    height:100px;
+
+    object-fit:contain;
+
+    margin-bottom:10px;
+
+}
+
+
+
+
+
+
+
+/* BOTTOM */
+
+
+.footer-bottom{
+
+    margin-top:40px;
+
+    padding-top:20px;
+
+    border-top:#f4d367;
+
+    text-align:center;
+
+}
+
+
+
+.footer-bottom p{
+
+    color:white;
+
+    font-size:13px;
+
+    margin:0;
+
+}
+
+
+
+
+
+@media(max-width:768px){
+
+
+.main-footer{
+
+    text-align:center;
+
+}
+
+
+.footer-title{
+
+    font-size:26px;
+
+}
+
+
+}
+/*=========================================================
+    CART BADGE
+=========================================================*/
+
+#cartCount{
+
+    font-size:.75rem;
+
+}
+
+/*=========================================================
+    RESPONSIVE
+=========================================================*/
+
+@media(max-width:992px){
+
+    .shop-hero h1{
+
+        font-size:2.3rem;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .shop-hero{
+
+        padding:120px 20px 60px;
+
+    }
+
+    .shop-hero h1{
+
+        font-size:2rem;
+
+    }
+
+    .product-image{
+
+        height:220px;
+
+    }
+}
+
+    /*=========================================================
+    CART ICON
+=========================================================*/
+
+.cart-icon{
+
+    color:#ffffff;
+
+    font-size:1.8rem;
+
+    transition:.3s;
+
+}
+
+.cart-icon:hover{
+
+    color:#f4d367;
+
+    transform:scale(1.08);
+
+}
+
+#cartCount{
+
+    font-size:.7rem;
+
+    padding:6px 8px;
+
+}

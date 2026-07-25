@@ -1,0 +1,715 @@
+/*=========================================================
+    GLOBAL STYLES
+=========================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+        linear-gradient(rgba(16, 17, 19, 0.85),rgba(10,20,40,.90)),
+        url("../imagess/heroo.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+    color:#ffffff;
+
+    overflow-x:hidden;
+
+}
+
+/*=========================================================
+    NAVBAR
+=========================================================*/
+
+.navbar{
+
+    background:rgba(0,0,0,.45)!important;
+
+    backdrop-filter:blur(10px);
+
+    padding:15px 0;
+
+    transition:.3s;
+
+}
+
+.logo{
+
+    width:60px;
+
+}
+
+.logo-title{
+
+    color:#f4d367;
+
+    font-weight:700;
+
+    font-size:20px;
+
+}
+
+.logo-subtitle{
+
+    color:#ffffff;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.navbar-nav .nav-item{
+
+    margin-left:15px;
+
+}
+
+.navbar-nav .nav-link{
+
+    color:white;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.navbar-nav .nav-link:hover{
+
+    color:#f4d367;
+
+}
+
+/*=========================================================
+    THANK YOU SECTION
+=========================================================*/
+
+.thankyou-section{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:120px 15px 80px;
+
+}
+
+/*=========================================================
+    GLASS CARD
+=========================================================*/
+
+.thankyou-card{
+
+    width:100%;
+
+    max-width:950px;
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.20);
+
+    border-radius:25px;
+
+    padding:60px;
+
+    text-align:center;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+/*=========================================================
+    SUCCESS ICON
+=========================================================*/
+
+.success-icon{
+
+    width:120px;
+
+    height:120px;
+
+    margin:auto;
+
+    margin-bottom:30px;
+
+    border-radius:50%;
+
+    background:#16c784;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    animation:pop 1s ease;
+
+}
+
+.success-icon i{
+
+    font-size:70px;
+
+    color:white;
+
+}
+
+/*=========================================================
+    TITLES
+=========================================================*/
+
+.event-title{
+
+    color:#f4d367;
+
+    font-size:32px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.success-title{
+
+    color:#f4d367;
+
+    font-size:24px;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+
+}
+
+.main-title{
+
+    font-size:50px;
+
+    font-weight:800;
+
+    margin-bottom:20px;
+
+}
+
+.main-title span{
+
+    color:#f4d367;
+
+}
+
+.success-message{
+
+    font-size:20px;
+
+    color:#f1f1f1;
+
+    margin-bottom:30px;
+
+    line-height:1.8;
+
+}
+
+/*=========================================================
+    DIVIDER
+=========================================================*/
+
+hr{
+
+    border:none;
+
+    height:1px;
+
+    background:rgba(255,255,255,.25);
+
+    margin:45px 0;
+
+}
+
+/*=========================================================
+    COUNTDOWN TITLE
+=========================================================*/
+
+.countdown-heading{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    margin-bottom:35px;
+
+    color:#ffffff;
+
+}
+
+.countdown-row{
+
+    row-gap:20px;
+
+}
+/*=========================================================
+    COUNTDOWN BOXES
+=========================================================*/
+
+.time-box{
+
+    background:rgba(255,255,255,.15);
+
+    border:1px solid rgba(255,255,255,.20);
+
+    border-radius:18px;
+
+    padding:25px 15px;
+
+    transition:.3s;
+
+}
+
+.time-box:hover{
+
+    transform:translateY(-8px);
+
+    background:rgba(255,255,255,.20);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+
+}
+
+.time-box h2{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#f4d367;
+
+    margin-bottom:10px;
+
+}
+
+.time-box span{
+
+    color:#ffffff;
+
+    letter-spacing:2px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+/*=========================================================
+    EVENT INFORMATION
+=========================================================*/
+
+.event-info{
+
+    margin-top:20px;
+
+}
+
+.event-info div{
+
+    padding:20px;
+
+}
+
+.event-info i{
+
+    font-size:40px;
+
+    color:#f4d367;
+
+    margin-bottom:15px;
+
+}
+
+.event-info h5{
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+    color:#ffffff;
+
+}
+
+.event-info p{
+
+    color:#e5e7eb;
+
+    font-size:16px;
+
+    line-height:1.6;
+
+}
+
+/*=========================================================
+    QUOTE SECTION
+=========================================================*/
+
+.quote-section{
+
+    margin:40px 0;
+
+}
+
+.quote-icon{
+
+    font-size:45px;
+
+    color:#f4d367;
+
+    display:block;
+
+    margin-bottom:20px;
+
+}
+
+.quote{
+
+    max-width:700px;
+
+    margin:auto;
+
+    font-size:22px;
+
+    font-style:italic;
+
+    line-height:1.8;
+
+    color:#ffffff;
+
+}
+
+/*=========================================================
+    BUTTONS
+=========================================================*/
+
+.home-btn{
+
+    background:#f4d367;
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.home-btn:hover{
+
+    background:#f4d367;
+
+    color:white;
+
+    transform:translateY(-4px);
+
+}
+
+.gallery-btn{
+
+    background:#f4b400;
+
+    color:#111827;
+
+    padding:15px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.gallery-btn:hover{
+
+    background:#ffc107;
+
+    color:#111827;
+
+    transform:translateY(-4px);
+
+}
+
+/*=========================================================
+    FOOTER
+=========================================================*/
+
+.footer{
+background:rgba(0,0,0,.45)!important ;
+
+    padding:35px 20px;
+
+    text-align:center;
+
+}
+
+.footer h4{
+
+    color:#f4d367;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+.footer p{
+
+    color:#d1d5db;
+
+    margin-bottom:8px;
+
+}
+
+/*=========================================================
+    ANIMATIONS
+=========================================================*/
+
+@keyframes pop{
+
+    0%{
+
+        transform:scale(0);
+
+        opacity:0;
+
+    }
+
+    70%{
+
+        transform:scale(1.15);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+.thankyou-card{
+
+    animation:fadeUp 1s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================================
+    RESPONSIVE DESIGN
+=========================================================*/
+
+@media(max-width:992px){
+
+    .thankyou-card{
+
+        padding:45px;
+
+    }
+
+    .main-title{
+
+        font-size:42px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .thankyou-card{
+
+        padding:35px 25px;
+
+    }
+
+    .event-title{
+
+        font-size:26px;
+
+    }
+
+    .success-title{
+
+        font-size:22px;
+
+    }
+
+    .main-title{
+
+        font-size:34px;
+
+    }
+
+    .success-message{
+
+        font-size:18px;
+
+    }
+
+    .countdown-heading{
+
+        font-size:24px;
+
+    }
+
+    .time-box h2{
+
+        font-size:34px;
+
+    }
+
+    .quote{
+
+        font-size:18px;
+
+    }
+
+    .home-btn,
+
+    .gallery-btn{
+
+        margin-bottom:15px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .logo{
+
+        width:50px;
+
+    }
+
+    .logo-title{
+
+        font-size:18px;
+
+    }
+
+    .logo-subtitle{
+
+        font-size:12px;
+
+    }
+
+    .thankyou-card{
+
+        padding:25px 18px;
+
+    }
+
+    .success-icon{
+
+        width:90px;
+
+        height:90px;
+
+    }
+
+    .success-icon i{
+
+        font-size:50px;
+
+    }
+
+    .main-title{
+
+        font-size:28px;
+
+    }
+
+    .event-title{
+
+        font-size:22px;
+
+    }
+
+    .success-title{
+
+        font-size:18px;
+
+    }
+
+    .success-message{
+
+        font-size:16px;
+
+    }
+
+    .time-box{
+
+        padding:18px 10px;
+
+    }
+
+    .time-box h2{
+
+        font-size:28px;
+
+    }
+
+    .quote{
+
+        font-size:16px;
+
+    }
+
+}

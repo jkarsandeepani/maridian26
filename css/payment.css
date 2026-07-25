@@ -1,0 +1,247 @@
+/*=========================================================
+    GLOBAL
+=========================================================*/
+
+body{
+
+    background:#0b0c0f;
+
+    color:#ffffff;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+/*=========================================================
+    HEADER
+=========================================================*/
+
+.payment-header{
+
+    padding:140px 0 70px;
+
+    background:linear-gradient(135deg,#0e0f10,#0f1011);
+
+    text-align:center;
+
+}
+
+.payment-header h1{
+
+    font-size:3rem;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.payment-header p{
+
+    color:#cbd5e1;
+
+    font-size:1.1rem;
+
+}
+
+/*=========================================================
+    PAYMENT CARD
+=========================================================*/
+
+.payment-card{
+
+    background:#101216;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+    height:100%;
+
+}
+
+/*=========================================================
+    CARD TITLES
+=========================================================*/
+
+.payment-card h3{
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.payment-card h3 i{
+
+    color:#f4d367;
+
+    margin-right:10px;
+
+}
+
+/*=========================================================
+    CUSTOMER DETAILS
+=========================================================*/
+
+.payment-card p{
+
+    margin-bottom:16px;
+
+    color:#e2e8f0;
+
+    font-size:1rem;
+
+}
+
+.payment-card strong{
+
+    color:#ffffff;
+
+}
+
+/*=========================================================
+    ORDER SUMMARY
+=========================================================*/
+
+#paymentSummary{
+
+    max-height:350px;
+
+    overflow-y:auto;
+
+    padding-right:5px;
+
+}
+
+.order-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.order-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.order-name{
+
+    font-weight:600;
+
+}
+
+.order-qty{
+
+    font-size:.9rem;
+
+    color:#94a3b8;
+
+}
+
+.order-price{
+
+    color:#f4d367;
+
+    font-weight:700;
+
+}
+
+/*=========================================================
+    TOTAL
+=========================================================*/
+
+#paymentTotal{
+
+    color:#22c55e;
+
+    font-size:1.6rem;
+
+    font-weight:700;
+
+}
+
+/*=========================================================
+    BUTTON
+=========================================================*/
+
+.btn-warning{
+
+    background:#f4d367;
+
+    border:none;
+
+    color:#111827;
+
+    font-weight:700;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.btn-warning:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(250,204,21,.35);
+
+}
+
+/*=========================================================
+    SCROLLBAR
+=========================================================*/
+
+#paymentSummary::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+#paymentSummary::-webkit-scrollbar-thumb{
+
+    background:#101214;
+
+    border-radius:10px;
+
+}
+
+/*=========================================================
+    RESPONSIVE
+=========================================================*/
+
+@media(max-width:768px){
+
+    .payment-header{
+
+        padding:120px 0 50px;
+
+    }
+
+    .payment-header h1{
+
+        font-size:2.2rem;
+
+    }
+
+    .payment-card{
+
+        margin-bottom:25px;
+
+    }
+
+}
