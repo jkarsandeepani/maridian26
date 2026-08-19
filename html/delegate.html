@@ -8,7 +8,7 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-    <title>Register | MARIDIAN '26</title>
+    <title>Delegate Registration | MARIDIAN '26</title>
 
 
     <!-- Bootstrap -->
@@ -32,24 +32,16 @@
         rel="stylesheet">
 
 
-    <!-- Main Website CSS -->
+    <!-- Delegate Registration CSS -->
 
     <link
         rel="stylesheet"
-        href="../css/style.css">
-
-
-    <!-- Register Page CSS -->
-
-    <link
-        rel="stylesheet"
-        href="../css/register.css">
+        href="../css/delegate.css">
 
 </head>
 
 
 <body>
-
 
 <!-- =====================================================
                         NAVBAR
@@ -58,9 +50,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
 
     <div class="container">
-
-
-        <!-- Logo -->
 
         <a
             class="navbar-brand d-flex align-items-center"
@@ -71,28 +60,20 @@
                 class="logo me-2"
                 alt="MARIDIAN Logo">
 
-
             <div>
 
                 <h5 class="logo-title m-0">
-
                     MARIDIAN
-
                 </h5>
 
-
                 <h6 class="logo-subtitle m-0">
-
                     2026
-
                 </h6>
 
             </div>
 
         </a>
 
-
-        <!-- Mobile Toggle -->
 
         <button
             class="navbar-toggler"
@@ -105,97 +86,62 @@
         </button>
 
 
-        <!-- Navigation -->
-
         <div
             class="collapse navbar-collapse"
             id="navbarMenu">
 
-
             <ul class="navbar-nav mx-auto">
 
-
                 <li class="nav-item">
-
                     <a
                         class="nav-link"
                         href="../index.html">
-
                         Home
-
                     </a>
-
                 </li>
 
-
                 <li class="nav-item">
-
                     <a
                         class="nav-link"
                         href="about.html">
-
                         About
-
                     </a>
-
                 </li>
 
-
                 <li class="nav-item">
-
                     <a
                         class="nav-link"
                         href="maridian.html">
-
                         MARIDIAN '26
-
                     </a>
-
                 </li>
 
-
                 <li class="nav-item">
-
                     <a
                         class="nav-link"
                         href="team.html">
-
                         Dream Team
-
                     </a>
-
                 </li>
 
-
                 <li class="nav-item">
-
                     <a
                         class="nav-link"
                         href="contact.html">
-
                         Contact
-
                     </a>
-
                 </li>
 
-
                 <li class="nav-item">
-
                     <a
                         class="nav-link"
                         href="shop.html">
-
                         Shop
-
                     </a>
-
                 </li>
 
             </ul>
 
-
-            <!-- Cart -->
 
             <div class="d-flex align-items-center">
 
@@ -204,7 +150,6 @@
                     class="cart-icon position-relative text-white text-decoration-none">
 
                     <i class="bi bi-cart3 fs-2"></i>
-
 
                     <span
                         id="cartCount"
@@ -227,32 +172,24 @@
 
 
 <!-- =====================================================
-                REGISTRATION HEADER
+                PAGE HEADER
 ===================================================== -->
 
-<section class="register-header">
+<section class="registration-header">
 
-    <div class="container text-center">
+    <div class="container">
 
-        <span class="register-small-title">
-
+        <span class="header-number">
             MARIDIAN '26
-
         </span>
 
-
         <h1>
-
-            COMPETITOR REGISTRATION
-
+            Delegate Registration
         </h1>
 
-
         <p>
-
-            Choose how you would like to compete
-            for MARIDIAN '26.
-
+            🌍 Register as a delegate and be part of
+            the MARIDIAN '26 experience.
         </p>
 
     </div>
@@ -262,125 +199,176 @@
 
 
 <!-- =====================================================
-                REGISTRATION TYPE
+                REGISTRATION FORM
 ===================================================== -->
 
-<section class="registration-choice">
+<section class="registration-section">
 
     <div class="container">
 
-
-        <div class="choice-intro text-center">
-
-            <h2>
-
-                How Would You Like To compete?
-
-            </h2>
-
-
-            <p>
-
-                Select the option that best describes
-                your participation.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="row justify-content-center g-4 mt-4">
+        <form id="delegateRegistrationForm">
 
 
             <!-- =================================================
-                    INDIVIDUAL REGISTRATION
+                    SECTION 01 — BASIC INFORMATION
             ================================================== -->
 
-            <div class="col-lg-5 col-md-6">
+            <div class="section-title">
 
-                <div class="registration-card">
+                <span class="number">
+                    01
+                </span>
 
+                <h4>
+                    BASIC INFORMATION
+                </h4>
 
-                    <div class="registration-icon">
-
-                        <i class="bi bi-person-fill"></i>
-
-                    </div>
-
-
-                    <span class="card-number">
-
-                        01
-
-                    </span>
+            </div>
 
 
-                    <h3>
+            <!-- Full Name -->
 
-                        Individual Registration
+            <div class="mb-4">
 
-                    </h3>
+                <label
+                    for="fullName"
+                    class="form-label">
 
+                    Full Name *
 
-                    <p>
+                </label>
 
-                        Register yourself as an individual
-                        delegate and share your cooking
-                        experience, skills and preferences.
+                <input
+                    type="text"
+                    class="form-control"
+                    id="fullName"
+                    name="fullName"
+                    placeholder="Enter your full name"
+                    required>
 
-                    </p>
-
-
-                    <ul>
-
-                        <li>
-
-                            <i class="bi bi-check-circle-fill"></i>
-
-                            Personal information
-
-                        </li>
+            </div>
 
 
-                        <li>
 
-                            <i class="bi bi-check-circle-fill"></i>
-
-                            Cooking experience
-
-                        </li>
+            <div class="row">
 
 
-                        <li>
+                <!-- Contact Number -->
 
-                            <i class="bi bi-check-circle-fill"></i>
+                <div class="col-lg-6 mb-4">
 
-                            Team role preferences
+                    <label
+                        for="phone"
+                        class="form-label">
 
-                        </li>
+                        Contact Number *
+
+                    </label>
+
+                    <input
+                        type="tel"
+                        class="form-control"
+                        id="phone"
+                        name="phone"
+                        placeholder="0700000000"
+                        maxlength="10"
+                        required>
+
+                    <small>
+                        WhatsApp preferred
+                    </small>
+
+                </div>
 
 
-                        <li>
+                <!-- Email -->
 
-                            <i class="bi bi-check-circle-fill"></i>
+                <div class="col-lg-6 mb-4">
 
-                            Food & safety information
+                    <label
+                        for="email"
+                        class="form-label">
 
-                        </li>
+                        Email Address *
 
-                    </ul>
+                    </label>
+
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        placeholder="you@email.com"
+                        required>
+
+                </div>
 
 
-                    <a
-                        href="indi-regi.html"
-                        class="register-choice-btn">
+            </div>
 
-                        Register as Individual
 
-                        <i class="bi bi-arrow-right"></i>
 
-                    </a>
+            <!-- Faculty / Batch -->
+
+            <div class="mb-4">
+
+                <label
+                    for="facultyBatch"
+                    class="form-label">
+
+                    Faculty / Batch *
+
+                </label>
+
+                <input
+                    type="text"
+                    class="form-control"
+                    id="facultyBatch"
+                    name="facultyBatch"
+                    placeholder="e.g. Faculty of Computing / 25.1"
+                    required>
+
+            </div>
+
+
+
+            <!-- =================================================
+                    DECLARATION
+            ================================================== -->
+
+            <div class="section-title mt-5">
+
+                <span class="number">
+                    02
+                </span>
+
+                <h4>
+                    DECLARATION
+                </h4>
+
+            </div>
+
+
+            <div class="declaration-box">
+
+                <div class="form-check">
+
+                    <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="agree"
+                        required>
+
+                    <label
+                        class="form-check-label"
+                        for="agree">
+
+                        I confirm that the information provided
+                        is accurate and agree to follow the event
+                        guidelines and instructions provided by
+                        the Organizing Committee.
+
+                    </label>
 
                 </div>
 
@@ -389,126 +377,25 @@
 
 
             <!-- =================================================
-                    GROUP REGISTRATION
+                    SUBMIT
             ================================================== -->
 
-            <div class="col-lg-5 col-md-6">
+            <div class="text-center mt-5">
 
-                <div class="registration-card group-card">
+                <button
+                    type="submit"
+                    class="register-submit">
 
+                    <i class="bi bi-check-circle-fill me-2"></i>
 
-                    <div class="registration-icon">
+                    Complete Registration
 
-                        <i class="bi bi-people-fill"></i>
-
-                    </div>
-
-
-                    <span class="card-number">
-
-                        02
-
-                    </span>
-
-
-                    <h3>
-
-                        Group  Registration
-
-                    </h3>
-
-
-                    <p>
-
-                        Register your cooking team together
-                        and provide the details of your team
-                        members and planned participation.
-
-                    </p>
-
-
-                    <ul>
-
-                        <li>
-
-                            <i class="bi bi-check-circle-fill"></i>
-
-                            Team information
-
-                        </li>
-
-
-                        <li>
-
-                            <i class="bi bi-check-circle-fill"></i>
-
-                            Team member details
-
-                        </li>
-
-
-                        <li>
-
-                            <i class="bi bi-check-circle-fill"></i>
-
-                            Cooking experience
-
-                        </li>
-
-
-                        <li>
-
-                            <i class="bi bi-check-circle-fill"></i>
-
-                            Team roles & food safety
-
-                        </li>
-
-                    </ul>
-
-
-                    <a
-                        href="group-regi.html"
-                        class="register-choice-btn">
-
-                        Register as Group
-
-                        <i class="bi bi-arrow-right"></i>
-
-                    </a>
-
-                </div>
+                </button>
 
             </div>
 
 
-        </div>
-
-
-        <!-- =================================================
-                    INFORMATION
-        ================================================== -->
-
-        <div class="registration-note">
-
-            <i class="bi bi-info-circle-fill"></i>
-
-
-            <p>
-
-                Not sure which option to choose?
-
-                Choose <strong>Individual Registration</strong>
-                if you are registering by yourself.
-
-                Choose <strong>Group Registration</strong>
-                if you already have a team and want to
-                register your team together.
-
-            </p>
-
-        </div>
-
+        </form>
 
     </div>
 
@@ -524,117 +411,65 @@
 
     <div class="container">
 
-
         <div class="row g-4">
 
 
-            <!-- SECTION 1 -->
+            <!-- Event -->
 
             <div class="col-lg-4 col-md-6">
 
                 <h3 class="footer-title">
-
                     MARIDIAN '26
-
                 </h3>
-
 
                 <p class="footer-text">
 
-                    A global cultural experience connecting
-                    people, ideas, and communities through
-                    unforgettable moments.
+                    A global cultural experience
+                    connecting people, ideas, and
+                    communities through unforgettable
+                    moments.
 
                 </p>
 
-
                 <p class="footer-text">
-
-                    where the worlds collide
-
+                    Where the worlds collide.
                 </p>
 
             </div>
 
 
-
-            <!-- SECTION 2 -->
+            <!-- Information -->
 
             <div class="col-lg-2 col-md-6">
 
                 <h5 class="footer-heading">
-
                     Information
-
                 </h5>
-
 
                 <ul class="footer-links">
 
-
                     <li>
-
                         <a href="../index.html">
-
                             Home
-
                         </a>
-
                     </li>
 
-
                     <li>
-
                         <a href="about.html">
-
                             About
-
                         </a>
-
                     </li>
 
-
                     <li>
-
-                        <a href="maridian.html">
-
-                            MARIDIAN '26
-
-                        </a>
-
-                    </li>
-
-
-                    <li>
-
                         <a href="team.html">
-
                             Dream Team
-
                         </a>
-
                     </li>
 
-
                     <li>
-
                         <a href="contact.html">
-
                             Contact
-
                         </a>
-
-                    </li>
-
-
-                    <li>
-
-                        <a href="shop.html">
-
-                            Shop
-
-                        </a>
-
                     </li>
 
                 </ul>
@@ -642,55 +477,41 @@
             </div>
 
 
-
-            <!-- SECTION 3 -->
+            <!-- AIESEC NSBM -->
 
             <div class="col-lg-3 col-md-6 text-center">
 
                 <h5 class="footer-heading">
-
                     Organized By
-
                 </h5>
-
 
                 <img
                     src="../imagess/club-logo.jpg"
                     class="footer-logo"
                     alt="AIESEC NSBM">
 
-
                 <p class="footer-text">
-
                     AIESEC NSBM
-
                 </p>
 
             </div>
 
 
-
-            <!-- SECTION 4 -->
+            <!-- AIESEC Sri Lanka -->
 
             <div class="col-lg-3 col-md-6 text-center">
 
                 <h5 class="footer-heading">
-
                     Powered By
-
                 </h5>
-
 
                 <img
                     src="../imagess/aiesec-logoo.jpg"
                     class="footer-logo"
                     alt="AIESEC Sri Lanka">
 
-
                 <p class="footer-text">
-
                     AIESEC Sri Lanka
-
                 </p>
 
             </div>
@@ -699,17 +520,13 @@
         </div>
 
 
-
         <div class="footer-bottom">
 
             <p>
-
                 © 2026 MARIDIAN '26 | AIESEC NSBM
-
             </p>
 
         </div>
-
 
     </div>
 
@@ -724,10 +541,11 @@
 </script>
 
 
-<!-- Register JavaScript -->
+<!-- Delegate Registration JS -->
 
 <script
-    src="../js/register.js">
+    type="module"
+    src="../js/delegate.js">
 </script>
 
 

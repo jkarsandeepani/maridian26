@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Group Registration | MARIDIAN '26</title>
+
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+   <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
+    <!-- Group Registration CSS -->
+    <link rel="stylesheet" href="../css/group-regi.css">
+
+</head>
+
+
+<body>
+
+<!-- =====================================================
+                        NAVBAR
+===================================================== -->
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+    <div class="container">
+
+        <a
+            class="navbar-brand d-flex align-items-center"
+            href="../index.html">
+
+            <img
+                src="../imagess/logo.jpg"
+                class="logo me-2"
+                alt="MARIDIAN Logo">
+
+            <div>
+
+                <h5 class="logo-title m-0">
+                    MARIDIAN
+                </h5>
+
+                <h6 class="logo-subtitle m-0">
+                    2026
+                </h6>
+
+            </div>
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="navbarMenu">
+
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="../index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="maridian.html">
+                        MARIDIAN '26
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="team.html">
+                        Dream Team
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="shop.html">
+                        Shop
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <div class="d-flex align-items-center">
+
+                <a
+                    href="cart.html"
+                    class="cart-icon position-relative text-white text-decoration-none">
+
+                    <i class="bi bi-cart3 fs-2"></i>
+
+                    <span
+                        id="cartCount"
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+
+                        0
+
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+                REGISTRATION HEADER
+===================================================== -->
+
+<section class="registration-header">
+
+    <div class="container">
+
+        <span class="header-number">
+            MARIDIAN '26
+        </span>
+
+        <h1>
+            Group Delegate
+            <span>Registration</span>
+        </h1>
+
+        <p>
+            Register your team and get ready for an unforgettable
+            international cooking experience.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+                REGISTRATION FORM
+===================================================== -->
+
+<section class="registration-section">
+
+    <div class="container">
+
+        <form id="groupRegistrationForm">
+
+
+            <!-- =================================================
+                        SECTION 01
+            ================================================== -->
+
+            <div class="section-title">
+
+                <span class="number">
+                    01
+                </span>
+
+                <h4>
+                    GROUP INFORMATION
+                </h4>
+
+            </div>
+
+
+            <!-- Group Name -->
+
+            <div class="mb-4">
+
+                <label class="form-label">
+                    Group Name *
+                </label>
+
+                <input
+                    type="text"
+                    class="form-control"
+                    id="groupName"
+                    placeholder="Enter your group name"
+                    required>
+
+            </div>
+
+
+
+            <!-- Representative -->
+
+            <div class="sub-heading">
+
+                <i class="bi bi-person-fill"></i>
+
+                Group Representative
+
+            </div>
+
+
+            <div class="mb-4">
+
+                <label class="form-label">
+                    Representative's Full Name *
+                </label>
+
+                <input
+                    type="text"
+                    class="form-control"
+                    id="representativeName"
+                    placeholder="Full Name"
+                    required>
+
+            </div>
+
+
+            <div class="row">
+
+
+                <!-- Contact -->
+
+                <div class="col-lg-6 mb-4">
+
+                    <label class="form-label">
+                        Representative's Contact Number *
+                    </label>
+
+                    <input
+                        type="tel"
+                        class="form-control"
+                        id="representativePhone"
+                        placeholder="0700000000"
+                        required>
+
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="col-lg-6 mb-4">
+
+                    <label class="form-label">
+                        Representative's Email Address *
+                    </label>
+
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="representativeEmail"
+                        placeholder="you@email.com"
+                        required>
+
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+
+                <!-- Student ID -->
+
+                <div class="col-lg-6 mb-4">
+
+                    <label class="form-label">
+                        Representative's Student ID *
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="representativeStudentId"
+                        placeholder="Enter Student ID"
+                        required>
+
+                </div>
+
+
+                <!-- Batch -->
+
+                <div class="col-lg-6 mb-4">
+
+                    <label class="form-label">
+                        Representative's Batch *
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="representativeBatch"
+                        placeholder="e.g. 25.1"
+                        required>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                    MEMBER INFORMATION
+            ================================================== -->
+
+            <div class="sub-heading mt-4">
+
+                <i class="bi bi-people-fill"></i>
+
+                Member Information
+
+            </div>
+
+
+            <!-- MEMBER 1 -->
+
+            <div class="member-box">
+
+                <h5>
+                    Member 01
+                </h5>
+
+                <div class="row">
+
+                    <div class="col-lg-6 mb-4">
+
+                        <label class="form-label">
+                            Full Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="member1Name"
+                            placeholder="Full Name"
+                            required>
+
+                    </div>
+
+
+                    <div class="col-lg-6 mb-4">
+
+                        <label class="form-label">
+                            Contact Number *
+                        </label>
+
+                        <input
+                            type="tel"
+                            class="form-control"
+                            id="member1Phone"
+                            placeholder="0700000000"
+                            required>
+
+                    </div>
+
+
+                    <div class="col-lg-6 mb-4">
+
+                        <label class="form-label">
+                            Faculty / Batch *
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="member1FacultyBatch"
+                            placeholder="e.g. Computing / 25.1"
+                            required>
+
+                    </div>
+
+
+                    <div class="col-lg-6 mb-4">
+
+                        <label class="form-label">
+                            Student ID *
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="member1StudentId"
+                            placeholder="Student ID"
+                            required>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MEMBER 2 -->
+
+            <div class="member-box">
+
+                <h5>
+                    Member 02
+                </h5>
+
+                <div class="row">
+
+                    <div class="col-lg-6 mb-4">
+
+                        <label class="form-label">
+                            Full Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="member2Name"
+                            placeholder="Full Name"
+                            required>
+
+                    </div>
+
+
+                    <div class="col-lg-6 mb-4">
+
+                        <label class="form-label">
+                            Contact Number *
+                        </label>
+
+                        <input
+                            type="tel"
+                            class="form-control"
+                            id="member2Phone"
+                            placeholder="0700000000"
+                            required>
+
+                    </div>
+
+
+                    <div class="col-lg-6 mb-4">
+
+                        <label class="form-label">
+                            Faculty / Batch *
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="member2FacultyBatch"
+                            placeholder="e.g. Computing / 25.1"
+                            required>
+
+                    </div>
+
+
+                    <div class="col-lg-6 mb-4">
+
+                        <label class="form-label">
+                            Student ID *
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="member2StudentId"
+                            placeholder="Student ID"
+                            required>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MEMBER 3 -->
+
+            <div class="member-box">
+
+                <h5>
+                    Member 03
+                </h5>
+
+                <div class="row">
+
+                    <div class="col-lg-6 mb-4">
+
+                        <label class="form-label">
+                            Full Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="member3Name"
+                            placeholder="Full Name"
+                            required>
+
+                    </div>
+
+
+                    <div class="col-lg-6 mb-4">
+
+                        <label class="form-label">
+                            Contact Number *
+                        </label>
+
+                        <input
+                            type="tel"
+                            class="form-control"
+                            id="member3Phone"
+                            placeholder="0700000000"
+                            required>
+
+                    </div>
+
+
+                    <div class="col-lg-6 mb-4">
+
+                        <label class="form-label">
+                            Faculty / Batch *
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="member3FacultyBatch"
+                            placeholder="e.g. Computing / 25.1"
+                            required>
+
+                    </div>
+
+
+                    <div class="col-lg-6 mb-4">
+
+                        <label class="form-label">
+                            Student ID *
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="member3StudentId"
+                            placeholder="Student ID"
+                            required>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                    SECTION 02
+            ================================================== -->
+
+            <div class="section-title mt-5">
+
+                <span class="number">
+                    02
+                </span>
+
+                <h4>
+                    GROUP COOKING EXPERIENCE
+                </h4>
+
+            </div>
+
+
+            <!-- Cooking Experience -->
+
+            <div class="mb-4">
+
+                <label class="form-label">
+                    How would you describe your group's overall
+                    cooking experience? *
+                </label>
+
+                <select
+                    class="form-select"
+                    id="cookingExperience"
+                    required>
+
+                    <option value="">
+                        Select an option
+                    </option>
+
+                    <option>
+                        Little to no experience
+                    </option>
+
+                    <option>
+                        Mostly beginners
+                    </option>
+
+                    <option>
+                        A mix of beginner and intermediate
+                    </option>
+
+                    <option>
+                        At least one experienced cook
+                    </option>
+
+                    <option>
+                        Different levels of experience
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- Food Types -->
+
+            <div class="mb-4">
+
+                <label class="form-label">
+
+                    What types of food are your group members
+                    most comfortable preparing? *
+
+                </label>
+
+                <small class="question-help">
+                    Select all that apply.
+                </small>
+
+
+                <div class="checkbox-grid">
+
+
+                    <div class="form-check">
+
+                        <input
+                            class="form-check-input food-type"
+                            type="checkbox"
+                            value="Rice-based dishes"
+                            id="rice">
+
+                        <label
+                            class="form-check-label"
+                            for="rice">
+
+                            Rice-based dishes
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="form-check">
+
+                        <input
+                            class="form-check-input food-type"
+                            type="checkbox"
+                            value="Pasta / Noodles"
+                            id="pasta">
+
+                        <label
+                            class="form-check-label"
+                            for="pasta">
+
+                            Pasta / Noodles
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="form-check">
+
+                        <input
+                            class="form-check-input food-type"
+                            type="checkbox"
+                            value="Meat dishes"
+                            id="meat">
+
+                        <label
+                            class="form-check-label"
+                            for="meat">
+
+                            Meat dishes
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="form-check">
+
+                        <input
+                            class="form-check-input food-type"
+                            type="checkbox"
+                            value="Seafood"
+                            id="seafood">
+
+                        <label
+                            class="form-check-label"
+                            for="seafood">
+
+                            Seafood
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="form-check">
+
+                        <input
+                            class="form-check-input food-type"
+                            type="checkbox"
+                            value="Desserts / Baking"
+                            id="desserts">
+
+                        <label
+                            class="form-check-label"
+                            for="desserts">
+
+                            Desserts / Baking
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="form-check">
+
+                        <input
+                            class="form-check-input food-type"
+                            type="checkbox"
+                            value="Appetisers / Snacks"
+                            id="snacks">
+
+                        <label
+                            class="form-check-label"
+                            for="snacks">
+
+                            Appetisers / Snacks
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <input
+                    type="text"
+                    class="form-control mt-3"
+                    id="otherFood"
+                    placeholder="Other food type (optional)">
+
+            </div>
+
+
+
+            <!-- Speciality -->
+
+            <div class="mb-4">
+
+                <label class="form-label">
+
+                    Does anyone in your group have a particular
+                    cooking skill or speciality? *
+
+                </label>
+
+
+                <div class="radio-options">
+
+                    <div class="form-check">
+
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="speciality"
+                            value="Yes"
+                            id="specialityYes"
+                            required>
+
+                        <label
+                            class="form-check-label"
+                            for="specialityYes">
+
+                            Yes
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="form-check">
+
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="speciality"
+                            value="No"
+                            id="specialityNo">
+
+                        <label
+                            class="form-check-label"
+                            for="specialityNo">
+
+                            No
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <input
+                    type="text"
+                    class="form-control mt-3"
+                    id="specialityDetails"
+                    placeholder="Member's name and cooking skill / speciality">
+
+            </div>
+
+
+
+            <!-- Competition -->
+
+            <div class="mb-4">
+
+                <label class="form-label">
+
+                    Has anyone in your group participated
+                    in a cooking competition before? *
+
+                </label>
+
+
+                <div class="radio-options">
+
+                    <div class="form-check">
+
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="competition"
+                            value="Yes"
+                            id="competitionYes"
+                            required>
+
+                        <label
+                            class="form-check-label"
+                            for="competitionYes">
+
+                            Yes
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="form-check">
+
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="competition"
+                            value="No"
+                            id="competitionNo">
+
+                        <label
+                            class="form-check-label"
+                            for="competitionNo">
+
+                            No
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                    SECTION 03
+            ================================================== -->
+
+            <div class="section-title mt-5">
+
+                <span class="number">
+                    03
+                </span>
+
+                <h4>
+                    FOOD SAFETY
+                </h4>
+
+            </div>
+
+
+
+            <!-- Allergies -->
+
+            <div class="mb-4">
+
+                <label class="form-label">
+
+                    Does anyone in your group have any
+                    food allergies? *
+
+                </label>
+
+
+                <div class="radio-options">
+
+                    <div class="form-check">
+
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="allergies"
+                            value="Yes"
+                            id="allergyYes"
+                            required>
+
+                        <label
+                            class="form-check-label"
+                            for="allergyYes">
+
+                            Yes
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="form-check">
+
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="allergies"
+                            value="No"
+                            id="allergyNo">
+
+                        <label
+                            class="form-check-label"
+                            for="allergyNo">
+
+                            No
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <input
+                    type="text"
+                    class="form-control mt-3"
+                    id="allergyDetails"
+                    placeholder="Member's name and allergy">
+
+            </div>
+
+
+
+            <!-- Dietary Restrictions -->
+
+            <div class="mb-4">
+
+                <label class="form-label">
+
+                    Does anyone in your group have any
+                    dietary restrictions or ingredients
+                    they cannot consume? *
+
+                </label>
+
+
+                <div class="radio-options">
+
+                    <div class="form-check">
+
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="dietary"
+                            value="Yes"
+                            id="dietaryYes"
+                            required>
+
+                        <label
+                            class="form-check-label"
+                            for="dietaryYes">
+
+                            Yes
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="form-check">
+
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="dietary"
+                            value="No"
+                            id="dietaryNo">
+
+                        <label
+                            class="form-check-label"
+                            for="dietaryNo">
+
+                            No
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <input
+                    type="text"
+                    class="form-control mt-3"
+                    id="dietaryDetails"
+                    placeholder="Member's name and dietary restriction">
+
+            </div>
+
+
+
+            <!-- Food Safety Notes -->
+
+            <div class="mb-4">
+
+                <label class="form-label">
+
+                    Is there anything else related to food,
+                    allergies, dietary requirements, or safety
+                    that the Organizing Committee should know?
+
+                </label>
+
+                <textarea
+                    class="form-control"
+                    id="foodSafetyNotes"
+                    rows="4"
+                    placeholder="Please provide any important information..."></textarea>
+
+            </div>
+
+
+
+            <!-- =================================================
+                    SECTION 04
+            ================================================== -->
+
+            <div class="section-title mt-5">
+
+                <span class="number">
+                    04
+                </span>
+
+                <h4>
+                    FINAL DETAILS
+                </h4>
+
+            </div>
+
+
+
+            <!-- Looking Forward -->
+
+            <div class="mb-4">
+
+                <label class="form-label">
+
+                    What is your group most looking forward
+                    to about MARIDIAN '26? *
+
+                </label>
+
+
+                <select
+                    class="form-select"
+                    id="lookingForward"
+                    required>
+
+                    <option value="">
+                        Select an option
+                    </option>
+
+                    <option>
+                        Meeting international participants
+                    </option>
+
+                    <option>
+                        Learning about different cultures
+                    </option>
+
+                    <option>
+                        Cooking with an international team
+                    </option>
+
+                    <option>
+                        Making new friends
+                    </option>
+
+                    <option>
+                        The cooking competition
+                    </option>
+
+                    <option>
+                        Trying new food
+                    </option>
+
+                    <option>
+                        All of the above
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- Additional Comments -->
+
+            <div class="mb-4">
+
+                <label class="form-label">
+
+                    Is there anything else you would like
+                    the Organizing Committee to know
+                    about your group?
+
+                </label>
+
+                <textarea
+                    class="form-control"
+                    id="additionalComments"
+                    rows="5"
+                    placeholder="Anything you would like us to know..."></textarea>
+
+            </div>
+
+
+
+            <!-- =================================================
+                    SECTION 05
+            ================================================== -->
+
+            <div class="section-title mt-5">
+
+                <span class="number">
+                    05
+                </span>
+
+                <h4>
+                    MEDIA CONSENT
+                </h4>
+
+            </div>
+
+
+
+            <div class="consent-box">
+
+                <label class="form-label">
+
+                    Do you give consent for photographs and
+                    videos taken during MARIDIAN '26 to be used
+                    for AIESEC in NSBM's event documentation,
+                    promotional materials and social media
+                    platforms? *
+
+                </label>
+
+
+                <div class="radio-options">
+
+
+                    <div class="form-check">
+
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="mediaConsent"
+                            value="Yes"
+                            id="mediaYes"
+                            required>
+
+                        <label
+                            class="form-check-label"
+                            for="mediaYes">
+
+                            Yes, I give my consent.
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="form-check">
+
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="mediaConsent"
+                            value="No"
+                            id="mediaNo">
+
+                        <label
+                            class="form-check-label"
+                            for="mediaNo">
+
+                            No, I do not give my consent.
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                    DECLARATION
+            ================================================== -->
+
+            <div class="declaration-box">
+
+                <div class="form-check">
+
+                    <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="declaration"
+                        required>
+
+                    <label
+                        class="form-check-label"
+                        for="declaration">
+
+                        I confirm that the information provided
+                        is accurate and agree to follow the event
+                        guidelines and instructions provided by
+                        the Organizing Committee. *
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SUBMIT -->
+
+            <div class="text-center mt-5">
+
+                <button
+                    type="submit"
+                    class="btn register-submit">
+
+                    <i class="bi bi-check-circle-fill me-2"></i>
+
+                    Complete Group Registration
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+                    FOOTER
+===================================================== -->
+
+<footer class="main-footer">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+
+            <!-- Event -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <h3 class="footer-title">
+                    MARIDIAN '26
+                </h3>
+
+                <p class="footer-text">
+
+                    A global cultural experience connecting
+                    people, ideas, and communities through
+                    unforgettable moments.
+
+                </p>
+
+                <p class="footer-text">
+                    Where the worlds collide.
+                </p>
+
+            </div>
+
+
+            <!-- Information -->
+
+            <div class="col-lg-2 col-md-6">
+
+                <h5 class="footer-heading">
+                    Information
+                </h5>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="../index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="team.html">
+                            Dream Team
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html">
+                            Shop
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- AIESEC NSBM -->
+
+            <div class="col-lg-3 col-md-6 text-center">
+
+                <h5 class="footer-heading">
+                    Organized By
+                </h5>
+
+                <img
+                    src="../imagess/club-logo.jpg"
+                    class="footer-logo"
+                    alt="AIESEC NSBM">
+
+                <p class="footer-text">
+                    AIESEC NSBM
+                </p>
+
+            </div>
+
+
+            <!-- AIESEC Sri Lanka -->
+
+            <div class="col-lg-3 col-md-6 text-center">
+
+                <h5 class="footer-heading">
+                    Powered By
+                </h5>
+
+                <img
+                    src="../imagess/aiesec-logoo.jpg"
+                    class="footer-logo"
+                    alt="AIESEC Sri Lanka">
+
+                <p class="footer-text">
+                    AIESEC Sri Lanka
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 MARIDIAN '26 | AIESEC NSBM
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- Group Registration JS -->
+
+<script
+    type="module"
+    src="../js/group-regi.js">
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,702 @@
+/* ======================================================
+   MARIDIAN '26 — GROUP REGISTRATION
+====================================================== */
+
+
+/* ======================================================
+   GLOBAL
+====================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #050609;
+    color: white;
+}
+
+
+/* ======================================================
+   NAVBAR
+====================================================== */
+
+.navbar {
+    background: #050609;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.logo-title {
+    color: #f4d367;
+    font-weight: 700;
+}
+
+.logo-subtitle {
+    color: white;
+}
+
+.nav-link {
+    color: #fff !important;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #f4d367 !important;
+}
+
+.nav-link.active {
+    color: #f4d367 !important;
+    font-weight: 600;
+}
+
+
+/* ======================================================
+   CART
+====================================================== */
+
+.cart-icon {
+    color: white;
+    transition: 0.3s;
+}
+
+.cart-icon:hover {
+    color: #f4d367;
+}
+
+.cart-icon .badge {
+    font-size: 10px;
+    padding: 5px 7px;
+}
+
+
+
+/* ======================================================
+   REGISTRATION HEADER
+====================================================== */
+
+.registration-header {
+    padding: 100px 20px 70px;
+    text-align: center;
+    background: #040405;
+}
+
+.header-number {
+    display: inline-block;
+    color: #f4d367;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.registration-header h1 {
+    font-size: 58px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.registration-header h1 span {
+    color: #f4d367;
+}
+
+.registration-header p {
+    max-width: 750px;
+    margin: 20px auto 0;
+    color: #ddd;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* ======================================================
+   REGISTRATION SECTION
+====================================================== */
+
+.registration-section {
+    padding: 60px 0 100px;
+    background: #050609;
+}
+
+.registration-section .container {
+    max-width: 950px;
+}
+
+
+/* ======================================================
+   SECTION TITLE
+====================================================== */
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 35px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(244, 211, 103, 0.3);
+}
+
+.section-title .number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: #f4d367;
+    color: #050609;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.section-title h4 {
+    margin: 0;
+    color: #f4d367;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* ======================================================
+   SUB HEADING
+====================================================== */
+
+.sub-heading {
+    color: #f4d367;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 22px;
+}
+
+.sub-heading i {
+    margin-right: 8px;
+}
+
+
+/* ======================================================
+   FORM LABEL
+====================================================== */
+
+.form-label {
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.form-label::first-letter {
+    color: white;
+}
+
+
+/* ======================================================
+   INPUTS
+====================================================== */
+
+.form-control,
+.form-select {
+    min-height: 52px;
+
+    background: #111318;
+    border: 1px solid #34363d;
+
+    color: white;
+
+    border-radius: 10px;
+
+    padding: 12px 16px;
+
+    transition: 0.3s ease;
+}
+
+.form-control::placeholder {
+    color: #858585;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background: #111318;
+    color: white;
+
+    border-color: #f4d367;
+
+    box-shadow: 0 0 0 0.2rem rgba(244, 211, 103, 0.12);
+
+    outline: none;
+}
+
+.form-select option {
+    background: #111318;
+    color: white;
+}
+
+
+/* ======================================================
+   TEXTAREA
+====================================================== */
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+
+/* ======================================================
+   QUESTION HELP
+====================================================== */
+
+.question-help {
+    display: block;
+    color: #999;
+    font-size: 13px;
+    margin-top: -4px;
+    margin-bottom: 15px;
+}
+
+
+/* ======================================================
+   MEMBER BOX
+====================================================== */
+
+.member-box {
+    background: #0b0d11;
+
+    border: 1px solid #292c33;
+
+    border-radius: 15px;
+
+    padding: 28px;
+
+    margin-bottom: 25px;
+
+    transition: 0.3s ease;
+}
+
+.member-box:hover {
+    border-color: rgba(244, 211, 103, 0.45);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.member-box h5 {
+    color: #f4d367;
+    font-size: 18px;
+    font-weight: 600;
+
+    margin-bottom: 25px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #292c33;
+}
+
+
+/* ======================================================
+   CHECKBOX GRID
+====================================================== */
+
+.checkbox-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-top: 15px;
+}
+
+
+/* ======================================================
+   RADIO OPTIONS
+====================================================== */
+
+.radio-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    margin-top: 15px;
+}
+
+
+/* ======================================================
+   CHECKBOX / RADIO
+====================================================== */
+
+.form-check {
+    margin-bottom: 8px;
+}
+
+.form-check-input {
+    background-color: #111318;
+    border-color: #555;
+}
+
+.form-check-input:checked {
+    background-color: #f4d367;
+    border-color: #f4d367;
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.2rem rgba(244, 211, 103, 0.15);
+}
+
+.form-check-label {
+    color: #ddd;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+/* ======================================================
+   CONSENT BOX
+====================================================== */
+
+.consent-box {
+    background: #0b0d11;
+
+    border-left: 4px solid #f4d367;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+}
+
+.consent-box .form-label {
+    line-height: 1.8;
+}
+
+
+/* ======================================================
+   DECLARATION
+====================================================== */
+
+.declaration-box {
+    background: #0b0d11;
+
+    border: 1px solid #292c33;
+
+    border-radius: 12px;
+
+    padding: 22px;
+
+    margin-top: 25px;
+}
+
+.declaration-box .form-check-label {
+    line-height: 1.7;
+}
+
+
+/* ======================================================
+   SUBMIT BUTTON
+====================================================== */
+
+.register-submit {
+    background: #f4d367;
+
+    color: #050609;
+
+    border: none;
+
+    padding: 15px 40px;
+
+    border-radius: 50px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.register-submit:hover {
+    background: #fff;
+
+    color: #050609;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(244, 211, 103, 0.2);
+}
+
+
+/* ======================================================
+   FOOTER
+====================================================== */
+
+.main-footer {
+    background: #050609;
+
+    padding: 60px 0 20px;
+
+    color: white;
+}
+
+.footer-title {
+    color: #f4d367;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.footer-heading {
+    color: #f4d367;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+.footer-text {
+    color: white;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* ======================================================
+   FOOTER LINKS
+====================================================== */
+
+.footer-links {
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #f4d367;
+
+    padding-left: 5px;
+}
+
+
+/* ======================================================
+   FOOTER LOGOS
+====================================================== */
+
+.footer-logo {
+    width: 150px;
+
+    height: 100px;
+
+    object-fit: contain;
+
+    margin-bottom: 10px;
+}
+
+
+/* ======================================================
+   FOOTER BOTTOM
+====================================================== */
+
+.footer-bottom {
+    margin-top: 40px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #f4d367;
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: white;
+
+    font-size: 13px;
+
+    margin: 0;
+}
+
+
+/* ======================================================
+   TABLET
+====================================================== */
+
+@media (max-width: 991px) {
+
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .navbar-nav {
+        margin-top: 15px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .registration-header {
+        padding-top: 90px;
+    }
+
+    .registration-header h1 {
+        font-size: 48px;
+    }
+
+}
+
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 768px) {
+
+    .registration-header {
+        padding: 80px 20px 55px;
+    }
+
+    .registration-header h1 {
+        font-size: 40px;
+    }
+
+    .registration-header p {
+        font-size: 15px;
+    }
+
+    .registration-section {
+        padding: 45px 20px 70px;
+    }
+
+    .section-title {
+        gap: 12px;
+    }
+
+    .section-title .number {
+        width: 42px;
+        height: 42px;
+        font-size: 12px;
+    }
+
+    .section-title h4 {
+        font-size: 17px;
+    }
+
+    .member-box {
+        padding: 20px;
+    }
+
+    .checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .radio-options {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .register-submit {
+        width: 100%;
+    }
+
+    .main-footer {
+        text-align: center;
+    }
+
+}
+
+
+/* ======================================================
+   SMALL MOBILE
+====================================================== */
+
+@media (max-width: 480px) {
+
+    .logo {
+        width: 55px;
+        height: 55px;
+    }
+
+    .logo-title {
+        font-size: 18px;
+    }
+
+    .logo-subtitle {
+        font-size: 13px;
+    }
+
+    .registration-header {
+        padding-top: 70px;
+    }
+
+    .registration-header h1 {
+        font-size: 32px;
+    }
+
+    .header-number {
+        font-size: 12px;
+    }
+
+    .registration-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .section-title h4 {
+        font-size: 15px;
+    }
+
+    .member-box {
+        padding: 17px;
+    }
+
+    .footer-logo {
+        width: 130px;
+        height: 90px;
+    }
+
+}

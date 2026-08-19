@@ -1,24 +1,28 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js";
 
 import {
     getFirestore,
     collection,
     addDoc,
-    getDocs
-} from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
+    getDocs,
+    serverTimestamp
+} from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
 
 import {
     getAuth
-} from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
+} from "https://www.gstatic.com/firebasejs/12.17.1/firebase-auth.js";
+
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAdViYJhxVxMcb0gN5WpNWv6jxgDuJs_Gg",
-    authDomain: "unievent123-77d01.firebaseapp.com",
-    projectId: "unievent123-77d01",
-    storageBucket: "unievent123-77d01.firebasestorage.app",
-    messagingSenderId: "21875171361",
-    appId: "1:21875171361:web:108e6d64051e78ffb9c360"
+    apiKey: "AIzaSyBT5J_doG1U4sXcWNgCxIt6_w6d0S4J5kQ",
+    authDomain: "maridian26.firebaseapp.com",
+    projectId: "maridian26",
+    storageBucket: "maridian26.firebasestorage.app",
+    messagingSenderId: "518827182105",
+    appId: "1:518827182105:web:445b60a877bc0198ac0288",
+    measurementId: "G-TVZHMRYZH7"
 };
+
 
 const app = initializeApp(firebaseConfig);
 
@@ -29,5 +33,6 @@ export const auth = getAuth(app);
 export {
     collection,
     addDoc,
-    getDocs
+    getDocs,
+    serverTimestamp
 };
