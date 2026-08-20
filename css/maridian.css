@@ -1,0 +1,520 @@
+/* ======================================================
+   MARIDIAN '26 — ABOUT / MARIDIAN PAGE
+====================================================== */
+
+
+/* ======================================================
+   GLOBAL
+====================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #050609;
+    color: white;
+}
+
+
+
+/* ======================================================
+   NAVBAR
+====================================================== */
+
+.navbar {
+    background: #050609;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.logo-title {
+    color: #f4d367;
+    font-weight: 700;
+}
+
+.logo-subtitle {
+    color: white;
+}
+
+.nav-link {
+    color: #fff !important;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #f4d367 !important;
+}
+
+.nav-link.active {
+    color: #f4d367 !important;
+    font-weight: 600;
+}
+s
+/* ======================================================
+   MARIDIAN HEADER
+====================================================== */
+
+.about-header {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    text-align: center;
+    background: #050609;
+}
+
+.about-header h1 {
+    font-size: 75px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.about-header h1 span {
+    color: #f4d367;
+}
+
+.about-header p {
+    margin-top: 15px;
+    font-size: 20px;
+    color: white;
+    line-height: 1.7;
+}
+
+
+/* ======================================================
+   GALLERY
+====================================================== */
+
+.gallery-section {
+
+    padding: 80px 0;
+
+    background: #050609;
+
+}
+
+
+.gallery-section h2 {
+
+    color: #f4d367;
+
+    font-size: 45px;
+
+    font-weight: 700;
+
+}
+
+
+.gallery-section > .container > p {
+
+    color: white;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
+
+
+/* ======================================================
+   GALLERY CAROUSEL
+====================================================== */
+
+#maridianGallery {
+
+    position: relative;
+
+    max-width: 1000px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+/* ======================================================
+   GALLERY IMAGE
+====================================================== */
+
+.gallery-image {
+
+    width: 100%;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    display: block;
+
+}
+
+
+/* ======================================================
+   ARROWS
+====================================================== */
+
+.gallery-control {
+
+    width: 70px;
+
+    opacity: 1;
+
+}
+
+
+.gallery-arrow {
+
+    width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, .65);
+
+    color: #f4d367;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    transition: .3s ease;
+
+}
+
+
+.gallery-arrow:hover {
+
+    background: #f4d367;
+
+    color: #111827;
+
+    transform: scale(1.1);
+
+}
+
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 768px) {
+
+    .gallery-section {
+
+        padding: 60px 15px;
+
+    }
+
+
+    .gallery-section h2 {
+
+        font-size: 36px;
+
+    }
+
+
+    .gallery-section > .container > p {
+
+        font-size: 14px;
+
+    }
+
+
+    .gallery-image {
+
+        height: 300px;
+
+        border-radius: 15px;
+
+    }
+
+
+    .gallery-control {
+
+        width: 55px;
+
+    }
+
+
+    .gallery-arrow {
+
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 22px;
+
+    }
+
+}s
+
+/* ======================================================
+   FOOTER
+====================================================== */
+
+.main-footer {
+    background: #050609;
+    padding: 60px 0 20px;
+    color: white;
+}
+
+.footer-title {
+    color: #f4d367;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.footer-heading {
+    color: #f4d367;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-text {
+    color: white;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* ======================================================
+   FOOTER LINKS
+====================================================== */
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #f4d367;
+    padding-left: 5px;
+}
+
+
+/* ======================================================
+   FOOTER LOGOS
+====================================================== */
+
+.footer-logo {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+
+/* ======================================================
+   FOOTER BOTTOM
+====================================================== */
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #f4d367;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: white;
+    font-size: 13px;
+    margin: 0;
+}
+
+
+/* ======================================================
+   RESPONSIVE — TABLET
+====================================================== */
+
+@media (max-width: 991px) {
+
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .navbar-nav {
+        margin-top: 15px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .cart-icon {
+        margin-top: 10px;
+    }
+
+    .about-header {
+        padding-top: 140px;
+        padding-bottom: 70px;
+    }
+
+    .about-header h1 {
+        font-size: 60px;
+    }
+
+    .about-header p {
+        font-size: 18px;
+    }
+
+}
+
+
+/* ======================================================
+   RESPONSIVE — MOBILE
+====================================================== */
+
+@media (max-width: 768px) {
+
+    .main-footer {
+        text-align: center;
+    }
+
+    .about-header {
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+
+    .about-header h1 {
+        font-size: 48px;
+        letter-spacing: 1px;
+    }
+
+    .about-header p {
+        font-size: 16px;
+        padding: 0 15px;
+    }
+
+    .about-section {
+        padding: 60px 20px;
+    }
+
+    .about-section h2 {
+        font-size: 34px;
+    }
+
+    .about-section p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .gallery-section {
+        padding: 60px 20px;
+    }
+
+    .gallery-section h2 {
+        font-size: 34px;
+    }
+
+    .gallery-section > .container > p {
+        font-size: 14px;
+    }
+
+    .gallery-image {
+        height: 240px;
+        border-radius: 15px;
+    }
+
+    .footer-title {
+        font-size: 26px;
+    }
+
+    .footer-heading {
+        margin-top: 15px;
+    }
+
+}
+
+
+/* ======================================================
+   RESPONSIVE — SMALL MOBILE
+====================================================== */
+
+@media (max-width: 480px) {
+
+    .logo {
+        width: 55px;
+        height: 55px;
+    }
+
+    .logo-title {
+        font-size: 18px;
+    }
+
+    .logo-subtitle {
+        font-size: 13px;
+    }
+
+    .about-header {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    .about-header h1 {
+        font-size: 40px;
+    }
+
+    .about-header p {
+        font-size: 14px;
+    }
+
+    .about-section h2 {
+        font-size: 29px;
+    }
+
+    .gallery-section h2 {
+        font-size: 29px;
+    }
+
+    .gallery-image {
+        height: 220px;
+    }
+
+    .footer-logo {
+        width: 130px;
+        height: 90px;
+    }
+
+}

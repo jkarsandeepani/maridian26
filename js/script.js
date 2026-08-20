@@ -126,11 +126,7 @@ window.onbeforeunload = function () {
 
 };
 
-
-// ==========================================
-// PAGE LOADER
-// ==========================================
-
+/*page loader*/
 window.addEventListener("load", () => {
 
     const loader = document.getElementById("loader");
@@ -147,11 +143,12 @@ window.addEventListener("load", () => {
 
             document.body.style.overflow = "auto";
 
-        },800);
+        }, 800);
 
-    },3000);
+    }, 3000);
 
 });
+
 
 /*=========================================================
     UPDATE CART COUNT

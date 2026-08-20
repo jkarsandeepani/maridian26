@@ -1,428 +1,915 @@
-*{
+/* =====================================================
+                     RESET
+===================================================== */
 
-margin:0;
-padding:0;
-box-sizing:border-box;
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
-body{
-
-font-family:'Poppins',sans-serif;
-
-background:#050609;
-
-color:white;
-
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #050609;
+    color: white;
+    overflow-x: hidden;
 }
 
 
-
-
-
-/* NAVBAR */
-
-
-
-.navbar{
-
-    background:#050609;
-
-    box-shadow:0 5px 15px rgba(0,0,0,.25);
-
-    padding:15px 0;
-
-}
-
-.navbar-brand{
-
-    font-size:1.4rem;
-
-    font-weight:700;
-
-}
-
-.logo{
-
-width:65px;
-
-}
-
-
-.logo-title{
-
-color:#f4d367;
-
-font-weight:700;
-
-}
-
-
-
-.logo-subtitle{
-
-color:white;
-
-}
-
-
-
-.nav-link{
-
-    color:#fff !important;
-
-    margin-left:15px;
-
-    transition:.3s;
-
-}
-
-.nav-link:hover{
-
-    color:#f4d367 !important;
-
-}
-
-
-
-
-
-
-
-/* HEADER */
-
-
-.team-header{
-
-padding-top:180px;
-
-padding-bottom:80px;
-
-text-align:center;
-
-}
-
-
-
-.team-header h1{
-
-font-size:75px;
-
-font-weight:800;
-
-}
-
-
-
-.team-header span{
-
-color:#f4d367;
-
-}
-
-
-
-.team-header p{
-
-font-size:20px;
-
-}
-
-
-
-
-
-/* TEAM */
-
-
-.team-section{
-
-padding:60px 0;
-
-}
-
-
-
-.section-title{
-
-color:#f4d367;
-
-font-size:45px;
-
-font-weight:700;
-
-}
-
-
-
-
-.team-card{
-
-background:#050609;
-
-padding:25px;
-
-border-radius:20px;
-
-text-align:center;
-
-transition:.35s;
-
-}
-
-
-
-.team-card:hover{
-
-transform:translateY(-10px);
-
-box-shadow:0 15px 30px rgba(250,204,21,.25);
-
-}
-
-
-
-
-
-.member-img{
-
-width:100%;
-
-height:350px;
-
-object-fit:cover;
-
-border-radius:18px;
-
-}
-
-
-
-
-.team-card h3{
-
-color:white;
-
-margin-top:20px;
-
-font-size:22px;
-
-}
-
-
-
-.team-card p{
-
-color:white;
-
-font-size:16px;
-
-}
-
-
-
-
-
-/* PRESIDENT */
-
-
-.president-card{
-
-border:2px solid #f4d367;
-
-}
-
-
-
-.president-card .badge{
-
-background:#f4d367;
-
-color:black;
-
-padding:8px 18px;
-
-border-radius:20px;
-
-}
 
 
 /* ======================================================
-              MAIN FOOTER
+   NAVBAR
 ====================================================== */
 
+.navbar {
+    background: #050609;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    padding: 15px 0;
+}
 
-.main-footer{
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
 
-    background:#050609;
+.logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    border-radius: 50%;
+}
 
-    padding:60px 0 20px;
+.logo-title {
+    color: #f4d367;
+    font-weight: 700;
+}
 
-    color:white;
+.logo-subtitle {
+    color: white;
+}
+
+.nav-link {
+    color: #fff !important;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #f4d367 !important;
+}
+
+.nav-link.active {
+    color: #f4d367 !important;
+    font-weight: 600;
+}
+
+
+
+/* =====================================================
+                       TEAM HERO
+===================================================== */
+
+.team-header {
+    padding: 150px 20px 80px;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(244, 211, 103, .07),
+            transparent 45%
+        );
+}
+
+
+.hero-small-title {
+    color: #f4d367;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+
+.team-header h1 {
+    font-size: clamp(45px, 7vw, 78px);
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+
+.team-header h1 span {
+    color: #f4d367;
+}
+
+
+.team-header p {
+    max-width: 650px;
+    margin: 20px auto;
+    color: #999;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+
+
+/* =====================================================
+                     SECTION HEADING
+===================================================== */
+
+.leadership-section,
+.dream-tree-section {
+    padding: 80px 0;
+}
+
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+
+.section-heading span {
+    color: #f4d367;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+
+.section-heading h2 {
+    font-size: 45px;
+    font-weight: 800;
+    margin-top: 8px;
+}
+
+
+.section-heading strong {
+    color: #f4d367;
+}
+
+
+.section-heading p {
+    color: #888;
+    margin-top: 12px;
+}
+
+
+.gold-line {
+    width: 55px;
+    height: 3px;
+    background: #f4d367;
+    margin: 18px auto;
+}
+
+
+
+/* =====================================================
+                     EC MEMBERS
+===================================================== */
+
+.ec-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+
+.ec-member {
+    width: 180px;
+    text-align: center;
+    transition: .4s ease;
+}
+
+
+.ec-member:hover {
+    transform: translateY(-10px);
+}
+
+
+.ec-photo {
+    position: relative;
+    width: 145px;
+    height: 145px;
+    margin: auto;
+    padding: 5px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4d367,
+            #766021,
+            #f4d367
+        );
+
+    box-shadow:
+        0 0 30px rgba(244, 211, 103, .12);
+}
+
+
+.ec-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #050609;
+    transition: .5s ease;
+}
+
+
+.ec-member:hover .ec-photo img {
+    transform: scale(1.08);
+}
+
+
+.ec-number {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    background: #f4d367;
+    color: #050609;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    border: 3px solid #050609;
+}
+
+
+.ec-member h3 {
+    margin-top: 18px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+.ec-member p {
+    color: #f4d367;
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+
+
+/* =====================================================
+                EC → PRESIDENT CONNECTOR
+===================================================== */
+
+.leadership-connector {
+    width: 1px;
+    height: 70px;
+    background: linear-gradient(
+        to bottom,
+        #f4d367,
+        transparent
+    );
+
+    margin: 35px auto 0;
+}
+
+
+
+/* =====================================================
+                   DREAM TREE AREA
+===================================================== */
+
+.dream-tree-section {
+    background:
+        radial-gradient(
+            ellipse at center top,
+            rgba(244, 211, 103, .045),
+            transparent 55%
+        );
+}
+
+
+
+/* =====================================================
+                     PRESIDENT
+===================================================== */
+
+.president-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+
+.president-card {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    padding: 12px 28px 12px 12px;
+
+    background: #0b0c10;
+
+    border: 1px solid rgba(244, 211, 103, .55);
+
+    border-radius: 100px;
+
+    box-shadow:
+        0 0 35px rgba(244, 211, 103, .08);
+
+    transition: .4s ease;
+}
+
+
+.president-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 50px rgba(244, 211, 103, .16);
+}
+
+
+.president-photo {
+    position: relative;
+    width: 105px;
+    height: 105px;
+    padding: 4px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff2a8,
+            #f4d367,
+            #765d19
+        );
+}
+
+
+.president-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid #050609;
+}
+
+
+.crown {
+    position: absolute;
+
+    top: -8px;
+    right: -5px;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    background: #f4d367;
+
+    color: #050609;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 13px;
+
+    border: 3px solid #050609;
+}
+
+
+.president-info span {
+    color: #f4d367;
+    font-size: 9px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+
+.president-info h2 {
+    font-size: 23px;
+    margin: 6px 0;
+}
+
+
+.president-info p {
+    color: #aaa;
+    font-size: 12px;
+    margin: 0;
+}
+
+
+
+/* =====================================================
+                 PRESIDENT → TREE LINE
+===================================================== */
+
+.tree-main-line {
+    width: 1px;
+    height: 70px;
+
+    margin: 0 auto;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #f4d367,
+            rgba(244, 211, 103, .2)
+        );
+}
+
+
+
+/* =====================================================
+                     TWO BRANCHES
+===================================================== */
+
+.branches {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    max-width: 1050px;
+
+    margin: auto;
+}
+
+
+.branches::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 25%;
+    right: 25%;
+
+    height: 1px;
+
+    background: #f4d367;
+}
+
+
+
+/* =====================================================
+                     BRANCH TITLE
+===================================================== */
+
+.branch-title {
+    text-align: center;
+    padding-top: 25px;
+    margin-bottom: 30px;
+}
+
+
+.branch-title span {
+    color: #f4d367;
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+
+.branch-title h3 {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+
+
+/* =====================================================
+                    MEMBER LIST
+===================================================== */
+
+.member-list {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+
+
+/* =====================================================
+                     TREE MEMBER
+===================================================== */
+
+.tree-member {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 10px 15px;
+
+    background: rgba(10, 11, 15, .8);
+
+    border: 1px solid rgba(255, 255, 255, .06);
+
+    border-radius: 70px;
+
+    transition: .4s ease;
+}
+
+
+.tree-member:hover {
+    transform: translateX(8px);
+
+    border-color: rgba(244, 211, 103, .45);
+
+    background: #0d0e12;
+
+    box-shadow:
+        0 10px 30px rgba(244, 211, 103, .08);
+}
+
+
+
+/* =====================================================
+                     MEMBER PHOTO
+===================================================== */
+.member-photo {
+    position: relative;
+
+    width: 72px;
+    height: 72px;
+
+    flex-shrink: 0;
+
+    padding: 3px;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4d367,
+            #554717
+        );
+
+    transition: .4s ease;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 11px;
+
+    border: 3px solid #050609;
+
+    transition: .45s ease;
+}
+
+
+.tree-member:hover .member-photo img {
+    transform: scale(1.08);
+}
+
+
+.member-photo span {
+    position: absolute;
+
+    bottom: -2px;
+    right: -3px;
+
+    width: 23px;
+    height: 23px;
+
+    border-radius: 50%;
+
+    background: #f4d367;
+
+    color: #050609;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 7px;
+    font-weight: 800;
+
+    border: 2px solid #050609;
+}
+
+
+
+/* =====================================================
+                    MEMBER INFO
+===================================================== */
+
+.member-info h4 {
+    margin: 0;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: white;
+}
+
+
+.member-info p {
+    margin: 4px 0 0;
+
+    color: #f4d367;
+
+    font-size: 9px;
+
+    font-weight: 500;
+}
+
+
+
+/* =====================================================
+                 RIGHT SIDE MIRROR
+===================================================== */
+
+.branch-right .tree-member:hover {
+    transform: translateX(-8px);
+}
+
+
+
+/* =====================================================
+                       FOOTER
+===================================================== */
+
+.main-footer {
+    background: #050609;
+    padding: 60px 0 20px;
+    color: white;
+}
+
+
+.footer-title {
+    color: #f4d367;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+
+.footer-heading {
+    color: #f4d367;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+.footer-text {
+    color: white;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+
+.footer-links a:hover {
+    color: #f4d367;
+    padding-left: 5px;
+}
+
+
+.footer-logo {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(244, 211, 103, .3);
+
+    text-align: center;
+}
+
+
+.footer-bottom p {
+    color: white;
+    font-size: 13px;
+    margin: 0;
+}
+
+
+
+/* =====================================================
+                       TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .ec-row {
+        gap: 35px;
+    }
+
+
+    .branches {
+        gap: 25px;
+    }
+
+
+    .member-photo {
+        width: 65px;
+        height: 65px;
+    }
 
 }
 
 
 
+/* =====================================================
+                       MOBILE
+===================================================== */
 
-.footer-title{
+@media (max-width: 768px) {
 
-    color:#f4d367;
-
-    font-size:30px;
-
-    font-weight:700;
-
-    margin-bottom:15px;
-
-}
+    .team-header {
+        padding-top: 120px;
+    }
 
 
-
-.footer-heading{
-
-    color:#f4d367;
-
-    font-size:18px;
-
-    font-weight:600;
-
-    margin-bottom:20px;
-
-}
+    .section-heading h2 {
+        font-size: 35px;
+    }
 
 
+    .ec-row {
+        gap: 20px;
+    }
 
 
-.footer-text{
-
-    color:white;
-
-    font-size:14px;
-
-    line-height:1.8;
-
-}
+    .ec-member {
+        width: 120px;
+    }
 
 
+    .ec-photo {
+        width: 100px;
+        height: 100px;
+    }
 
 
-
-/* FOOTER LINKS */
-
-
-.footer-links{
-
-    list-style:none;
-
-    padding:0;
-
-}
+    .ec-member h3 {
+        font-size: 14px;
+    }
 
 
-
-.footer-links li{
-
-    margin-bottom:10px;
-
-}
+    .ec-member p {
+        font-size: 8px;
+    }
 
 
-
-.footer-links a{
-
-    color:white;
-
-    text-decoration:none;
-
-    transition:.3s;
-
-}
+    .president-card {
+        padding: 10px 20px 10px 10px;
+    }
 
 
+    .president-photo {
+        width: 85px;
+        height: 85px;
+    }
 
-.footer-links a:hover{
 
-    color:#f4d367;
+    .president-info h2 {
+        font-size: 18px;
+    }
 
-    padding-left:5px;
+
+    .branches {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+
+    .branches::before {
+        display: none;
+    }
+
+
+    .branch-title {
+        border-bottom: 1px solid rgba(244, 211, 103, .2);
+        padding-bottom: 15px;
+    }
+
+
+    .branch-right .tree-member:hover,
+    .tree-member:hover {
+        transform: translateY(-5px);
+    }
 
 }
 
 
 
+/* =====================================================
+                     SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .team-header {
+        padding: 110px 15px 60px;
+    }
 
 
+    .team-header h1 {
+        font-size: 42px;
+    }
 
 
-/* LOGOS */
+    .ec-row {
+        gap: 8px;
+    }
 
 
-.footer-logo{
-
-    width:150px;
-
-    height:100px;
-
-    object-fit:contain;
-
-    margin-bottom:10px;
-
-}
+    .ec-member {
+        width: 105px;
+    }
 
 
+    .ec-photo {
+        width: 82px;
+        height: 82px;
+    }
 
 
+    .ec-member h3 {
+        font-size: 12px;
+    }
 
 
-
-/* BOTTOM */
-
-
-.footer-bottom{
-
-    margin-top:40px;
-
-    padding-top:20px;
-
-    border-top:#f4d367;
-
-    text-align:center;
-
-}
+    .ec-member p {
+        font-size: 7px;
+    }
 
 
-
-.footer-bottom p{
-
-    color:white;
-
-    font-size:13px;
-
-    margin:0;
-
-}
+    .president-card {
+        border-radius: 25px;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
 
 
+    .member-photo {
+        width: 60px;
+        height: 60px;
+    }
 
 
-
-@media(max-width:768px){
-
-
-.main-footer{
-
-    text-align:center;
-
-}
+    .member-info h4 {
+        font-size: 12px;
+    }
 
 
-.footer-title{
-
-    font-size:26px;
-
-}
-
+    .member-info p {
+        font-size: 8px;
+    }
 
 }

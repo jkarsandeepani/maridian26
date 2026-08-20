@@ -18,69 +18,51 @@ color:white;
 }
 
 
-/* NAVBAR */
+/* ======================================================
+   NAVBAR
+====================================================== */
 
-.navbar{
-
-    background:#050609;
-
-    box-shadow:0 5px 15px rgba(0,0,0,.25);
-
-    padding:15px 0;
-
+.navbar {
+    background: #050609;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    padding: 15px 0;
 }
 
-.navbar-brand{
-
-    font-size:1.4rem;
-
-    font-weight:700;
-
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: 700;
 }
 
-.logo{
-
-width:65px;
-
+.logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    border-radius: 50%;
 }
 
-
-.logo-title{
-
-color:#f4d367;
-
-font-weight:700;
-
+.logo-title {
+    color: #f4d367;
+    font-weight: 700;
 }
 
-
-
-.logo-subtitle{
-
-color:white;
-
+.logo-subtitle {
+    color: white;
 }
 
-
-
-.nav-link{
-
-    color:#fff !important;
-
-    margin-left:15px;
-
-    transition:.3s;
-
+.nav-link {
+    color: #fff !important;
+    margin-left: 15px;
+    transition: 0.3s;
 }
 
-.nav-link:hover{
-
-    color:#f4d367 !important;
-
+.nav-link:hover {
+    color: #f4d367 !important;
 }
 
-
-
+.nav-link.active {
+    color: #f4d367 !important;
+    font-weight: 600;
+}
 
 
 /* HEADER */
