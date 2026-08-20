@@ -643,15 +643,7 @@ HERO BOTTOM
 
 }
 
-/* MOBILE VIDEO FIX */
 
-@media(max-width:768px){
-
-    .hero-video{
-        object-fit:contain;
-    }
-
-}
 
 .overlay{
 
