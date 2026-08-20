@@ -1,6 +1,6 @@
-/* =====================================================
-                     RESET
-===================================================== */
+/* ======================================================
+                    TEAM PAGE
+====================================================== */
 
 * {
     margin: 0;
@@ -10,13 +10,14 @@
 
 
 body {
+
     font-family: 'Poppins', sans-serif;
+
     background: #050609;
+
     color: white;
-    overflow-x: hidden;
+
 }
-
-
 
 
 /* ======================================================
@@ -65,851 +66,1069 @@ body {
     font-weight: 600;
 }
 
-
-
-/* =====================================================
-                       TEAM HERO
-===================================================== */
+/* ======================================================
+                     TEAM HEADER
+====================================================== */
 
 .team-header {
-    padding: 150px 20px 80px;
+
+    padding-top: 170px;
+
+    padding-bottom: 80px;
+
     text-align: center;
 
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(244, 211, 103, .07),
-            transparent 45%
-        );
 }
 
 
-.hero-small-title {
+.team-kicker {
+
+    display: inline-block;
+
     color: #f4d367;
-    font-size: 11px;
+
+    font-size: 12px;
+
     font-weight: 700;
-    letter-spacing: 5px;
+
+    letter-spacing: 3px;
+
     margin-bottom: 15px;
+
 }
 
 
 .team-header h1 {
-    font-size: clamp(45px, 7vw, 78px);
+
+    font-size: 75px;
+
     font-weight: 800;
-    letter-spacing: -2px;
+
+    line-height: 1.1;
+
 }
 
 
 .team-header h1 span {
+
     color: #f4d367;
+
 }
 
 
 .team-header p {
-    max-width: 650px;
-    margin: 20px auto;
-    color: #999;
-    line-height: 1.8;
-    font-size: 16px;
+
+    font-size: 19px;
+
+    color: rgba(255,255,255,.75);
+
+    margin-top: 15px;
+
 }
 
 
+/* ======================================================
+                COMMON SECTION HEADING
+====================================================== */
 
-/* =====================================================
-                     SECTION HEADING
-===================================================== */
+.team-section-heading {
 
-.leadership-section,
-.dream-tree-section {
-    padding: 80px 0;
-}
-
-
-.section-heading {
-    text-align: center;
     margin-bottom: 55px;
+
 }
 
 
-.section-heading span {
+.small-heading {
+
     color: #f4d367;
-    font-size: 10px;
+
+    font-size: 12px;
+
     font-weight: 700;
-    letter-spacing: 4px;
+
+    letter-spacing: 3px;
+
 }
 
 
-.section-heading h2 {
-    font-size: 45px;
-    font-weight: 800;
+.team-section-heading h2 {
+
+    color: white;
+
+    font-size: 42px;
+
+    font-weight: 700;
+
     margin-top: 8px;
+
 }
 
 
-.section-heading strong {
-    color: #f4d367;
+.team-section-heading p {
+
+    color: rgba(255,255,255,.65);
+
+    font-size: 15px;
+
+    margin-top: 10px;
+
 }
 
 
-.section-heading p {
-    color: #888;
-    margin-top: 12px;
+/* ======================================================
+                EXECUTIVE COMMITTEE
+====================================================== */
+
+.ec-section {
+
+    padding: 50px 0 110px;
+
 }
 
-
-.gold-line {
-    width: 55px;
-    height: 3px;
-    background: #f4d367;
-    margin: 18px auto;
-}
-
-
-
-/* =====================================================
-                     EC MEMBERS
-===================================================== */
 
 .ec-row {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 80px;
+
+    max-width: 1100px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
 }
 
 
-.ec-member {
-    width: 180px;
-    text-align: center;
+.ec-card {
+
+    position: relative;
+
+    padding: 8px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(244,211,103,.9),
+            rgba(244,211,103,.15),
+            rgba(244,211,103,.7)
+        );
+
     transition: .4s ease;
+
 }
 
 
-.ec-member:hover {
+.ec-card:hover {
+
     transform: translateY(-10px);
+
+    box-shadow:
+        0 20px 45px rgba(244,211,103,.18);
+
 }
 
 
 .ec-photo {
+
     position: relative;
-    width: 145px;
-    height: 145px;
-    margin: auto;
-    padding: 5px;
 
-    border-radius: 50%;
+    width: 100%;
 
-    background:
-        linear-gradient(
-            135deg,
-            #f4d367,
-            #766021,
-            #f4d367
-        );
+    aspect-ratio: 4 / 4.7;
 
-    box-shadow:
-        0 0 30px rgba(244, 211, 103, .12);
+    overflow: hidden;
+
+    border-radius: 19px;
+
+    background: #101116;
+
 }
 
 
 .ec-photo img {
+
     width: 100%;
+
     height: 100%;
+
     object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #050609;
+
+    display: block;
+
     transition: .5s ease;
+
 }
 
 
-.ec-member:hover .ec-photo img {
-    transform: scale(1.08);
+.ec-card:hover .ec-photo img {
+
+    transform: scale(1.04);
+
 }
 
 
-.ec-number {
+/* ======================================================
+                     IMAGE OVERLAY
+====================================================== */
+
+.photo-overlay {
+
     position: absolute;
-    bottom: 0;
+
+    left: 0;
+
     right: 0;
 
-    width: 34px;
-    height: 34px;
+    bottom: 0;
 
-    border-radius: 50%;
+    padding: 45px 22px 20px;
 
-    background: #f4d367;
-    color: #050609;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 10px;
-    font-weight: 800;
-
-    border: 3px solid #050609;
-}
-
-
-.ec-member h3 {
-    margin-top: 18px;
-    font-size: 18px;
-    font-weight: 700;
-}
-
-
-.ec-member p {
-    color: #f4d367;
-    font-size: 10px;
-    margin-top: 5px;
-}
-
-
-
-/* =====================================================
-                EC → PRESIDENT CONNECTOR
-===================================================== */
-
-.leadership-connector {
-    width: 1px;
-    height: 70px;
-    background: linear-gradient(
-        to bottom,
-        #f4d367,
-        transparent
-    );
-
-    margin: 35px auto 0;
-}
-
-
-
-/* =====================================================
-                   DREAM TREE AREA
-===================================================== */
-
-.dream-tree-section {
     background:
-        radial-gradient(
-            ellipse at center top,
-            rgba(244, 211, 103, .045),
-            transparent 55%
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.95),
+            rgba(0,0,0,.65),
+            transparent
         );
+
 }
 
 
+.photo-overlay h3 {
 
-/* =====================================================
-                     PRESIDENT
-===================================================== */
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    margin: 0;
+
+}
+
+
+.photo-overlay span {
+
+    display: inline-block;
+
+    color: #f4d367;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-top: 5px;
+
+}
+
+
+/* ======================================================
+                ORGANIZING COMMITTEE
+====================================================== */
+
+.oc-section {
+
+    padding: 90px 0 120px;
+
+    border-top: 1px solid rgba(244,211,103,.12);
+
+}
+
+
+/* ======================================================
+                       PRESIDENT
+====================================================== */
 
 .president-wrapper {
+
     display: flex;
+
     justify-content: center;
+
+    margin-bottom: 65px;
+
 }
 
 
 .president-card {
-    position: relative;
 
-    display: flex;
-    align-items: center;
-    gap: 25px;
+    width: 330px;
 
-    padding: 12px 28px 12px 12px;
+    padding: 8px;
 
-    background: #0b0c10;
+    border-radius: 28px;
 
-    border: 1px solid rgba(244, 211, 103, .55);
-
-    border-radius: 100px;
+    background:
+        linear-gradient(
+            145deg,
+            #f4d367,
+            #705f24,
+            #f4d367
+        );
 
     box-shadow:
-        0 0 35px rgba(244, 211, 103, .08);
+        0 20px 60px rgba(244,211,103,.12);
 
     transition: .4s ease;
+
 }
 
 
 .president-card:hover {
+
     transform: translateY(-8px);
 
     box-shadow:
-        0 20px 50px rgba(244, 211, 103, .16);
+        0 25px 65px rgba(244,211,103,.22);
+
 }
 
 
 .president-photo {
+
     position: relative;
-    width: 105px;
-    height: 105px;
-    padding: 4px;
 
-    border-radius: 50%;
+    aspect-ratio: 4 / 4.8;
 
-    background:
-        linear-gradient(
-            135deg,
-            #fff2a8,
-            #f4d367,
-            #765d19
-        );
+    overflow: hidden;
+
+    border-radius: 21px;
+
+    background: #101116;
+
 }
 
 
 .president-photo img {
+
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
 
-    border-radius: 50%;
+    display: block;
 
-    border: 4px solid #050609;
 }
 
 
-.crown {
+.president-overlay {
+
     position: absolute;
 
-    top: -8px;
-    right: -5px;
+    left: 0;
 
-    width: 30px;
-    height: 30px;
+    right: 0;
 
-    border-radius: 50%;
+    bottom: 0;
+
+    padding: 55px 22px 22px;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.96),
+            rgba(0,0,0,.7),
+            transparent
+        );
+
+}
+
+
+.president-label {
+
+    display: inline-block;
+
+    padding: 5px 13px;
+
+    border-radius: 20px;
 
     background: #f4d367;
 
     color: #050609;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 13px;
-
-    border: 3px solid #050609;
-}
-
-
-.president-info span {
-    color: #f4d367;
-    font-size: 9px;
-    letter-spacing: 3px;
-    font-weight: 700;
-}
-
-
-.president-info h2 {
-    font-size: 23px;
-    margin: 6px 0;
-}
-
-
-.president-info p {
-    color: #aaa;
-    font-size: 12px;
-    margin: 0;
-}
-
-
-
-/* =====================================================
-                 PRESIDENT → TREE LINE
-===================================================== */
-
-.tree-main-line {
-    width: 1px;
-    height: 70px;
-
-    margin: 0 auto;
-
-    background:
-        linear-gradient(
-            to bottom,
-            #f4d367,
-            rgba(244, 211, 103, .2)
-        );
-}
-
-
-
-/* =====================================================
-                     TWO BRANCHES
-===================================================== */
-
-.branches {
-    position: relative;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    gap: 70px;
-
-    max-width: 1050px;
-
-    margin: auto;
-}
-
-
-.branches::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-
-    left: 25%;
-    right: 25%;
-
-    height: 1px;
-
-    background: #f4d367;
-}
-
-
-
-/* =====================================================
-                     BRANCH TITLE
-===================================================== */
-
-.branch-title {
-    text-align: center;
-    padding-top: 25px;
-    margin-bottom: 30px;
-}
-
-
-.branch-title span {
-    color: #f4d367;
     font-size: 10px;
-    letter-spacing: 3px;
-    font-weight: 700;
-}
 
-
-.branch-title h3 {
-    font-size: 18px;
-    margin-top: 5px;
-}
-
-
-
-/* =====================================================
-                    MEMBER LIST
-===================================================== */
-
-.member-list {
-    display: flex;
-    flex-direction: column;
-    gap: 17px;
-}
-
-
-
-/* =====================================================
-                     TREE MEMBER
-===================================================== */
-
-.tree-member {
-    position: relative;
-
-    display: flex;
-    align-items: center;
-
-    gap: 18px;
-
-    padding: 10px 15px;
-
-    background: rgba(10, 11, 15, .8);
-
-    border: 1px solid rgba(255, 255, 255, .06);
-
-    border-radius: 70px;
-
-    transition: .4s ease;
-}
-
-
-.tree-member:hover {
-    transform: translateX(8px);
-
-    border-color: rgba(244, 211, 103, .45);
-
-    background: #0d0e12;
-
-    box-shadow:
-        0 10px 30px rgba(244, 211, 103, .08);
-}
-
-
-
-/* =====================================================
-                     MEMBER PHOTO
-===================================================== */
-.member-photo {
-    position: relative;
-
-    width: 72px;
-    height: 72px;
-
-    flex-shrink: 0;
-
-    padding: 3px;
-
-    border-radius: 14px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #f4d367,
-            #554717
-        );
-
-    transition: .4s ease;
-}
-
-.member-photo img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    border-radius: 11px;
-
-    border: 3px solid #050609;
-
-    transition: .45s ease;
-}
-
-
-.tree-member:hover .member-photo img {
-    transform: scale(1.08);
-}
-
-
-.member-photo span {
-    position: absolute;
-
-    bottom: -2px;
-    right: -3px;
-
-    width: 23px;
-    height: 23px;
-
-    border-radius: 50%;
-
-    background: #f4d367;
-
-    color: #050609;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 7px;
     font-weight: 800;
 
-    border: 2px solid #050609;
+    letter-spacing: 1.5px;
+
+    margin-bottom: 8px;
+
 }
 
 
+.president-overlay h3 {
 
-/* =====================================================
-                    MEMBER INFO
-===================================================== */
+    color: white;
 
-.member-info h4 {
+    font-size: 22px;
+
+    font-weight: 700;
+
     margin: 0;
+
+}
+
+
+.president-overlay p {
+
+    color: #f4d367;
 
     font-size: 14px;
 
     font-weight: 600;
 
-    color: white;
+    margin: 4px 0 0;
+
 }
 
 
-.member-info p {
-    margin: 4px 0 0;
+/* ======================================================
+                    OC CAROUSEL
+====================================================== */
+
+.oc-carousel-wrapper {
+
+    max-width: 720px;
+
+    margin: 0 auto;
+
+}
+
+
+#ocCarousel {
+
+    position: relative;
+
+    padding: 0 55px;
+
+}
+
+
+.oc-member-card {
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+.oc-photo {
+
+    position: relative;
+
+    width: 300px;
+
+    aspect-ratio: 4 / 4.7;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: #101116;
+
+    border: 2px solid rgba(244,211,103,.45);
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.5);
+
+    transition: .4s ease;
+
+}
+
+
+.oc-photo:hover {
+
+    border-color: #f4d367;
+
+    box-shadow:
+        0 20px 55px rgba(244,211,103,.15);
+
+}
+
+
+.oc-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: .5s ease;
+
+}
+
+
+.oc-photo:hover img {
+
+    transform: scale(1.04);
+
+}
+
+
+/* ======================================================
+                 OC PHOTO INFORMATION
+====================================================== */
+
+.oc-photo-info {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    padding: 55px 20px 20px;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.96),
+            rgba(0,0,0,.72),
+            transparent
+        );
+
+}
+
+
+.oc-photo-info h3 {
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    margin: 0;
+
+}
+
+
+.oc-photo-info p {
 
     color: #f4d367;
 
-    font-size: 9px;
+    font-size: 13px;
 
-    font-weight: 500;
+    font-weight: 600;
+
+    margin: 5px 0 0;
+
 }
 
 
+/* ======================================================
+                  CAROUSEL BUTTONS
+====================================================== */
 
-/* =====================================================
-                 RIGHT SIDE MIRROR
-===================================================== */
+.carousel-control-prev,
+.carousel-control-next {
 
-.branch-right .tree-member:hover {
-    transform: translateX(-8px);
+    width: 48px;
+
+    height: 48px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background: rgba(244,211,103,.12);
+
+    border: 1px solid rgba(244,211,103,.5);
+
+    opacity: 1;
+
+    transition: .3s ease;
+
 }
 
 
+.carousel-control-prev {
 
-/* =====================================================
+    left: 0;
+
+}
+
+
+.carousel-control-next {
+
+    right: 0;
+
+}
+
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+
+    background: #f4d367;
+
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+
+    width: 18px;
+
+    height: 18px;
+
+}
+
+
+.carousel-control-prev:hover
+.carousel-control-prev-icon {
+
+    filter: invert(1);
+
+}
+
+
+.carousel-control-next:hover
+.carousel-control-next-icon {
+
+    filter: invert(1);
+
+}
+
+
+/* ======================================================
+                      SWIPE HINT
+====================================================== */
+
+.swipe-hint {
+
+    color: rgba(255,255,255,.45);
+
+    font-size: 12px;
+
+    margin-top: 22px;
+
+    letter-spacing: .3px;
+
+}
+
+
+.swipe-hint i {
+
+    color: #f4d367;
+
+    margin-right: 5px;
+
+}
+
+
+/* ======================================================
                        FOOTER
-===================================================== */
+====================================================== */
 
 .main-footer {
+
     background: #050609;
+
     padding: 60px 0 20px;
+
     color: white;
+
 }
 
 
 .footer-title {
+
     color: #f4d367;
+
     font-size: 30px;
+
     font-weight: 700;
+
     margin-bottom: 15px;
+
 }
 
 
 .footer-heading {
+
     color: #f4d367;
+
     font-size: 18px;
+
     font-weight: 600;
+
     margin-bottom: 20px;
+
 }
 
 
 .footer-text {
+
     color: white;
+
     font-size: 14px;
+
     line-height: 1.8;
+
 }
 
 
 .footer-links {
+
     list-style: none;
+
     padding: 0;
+
 }
 
 
 .footer-links li {
+
     margin-bottom: 10px;
+
 }
 
 
 .footer-links a {
+
     color: white;
+
     text-decoration: none;
+
     transition: .3s;
+
 }
 
 
 .footer-links a:hover {
+
     color: #f4d367;
+
     padding-left: 5px;
+
 }
 
 
 .footer-logo {
+
     width: 150px;
+
     height: 100px;
+
     object-fit: contain;
+
     margin-bottom: 10px;
+
 }
 
 
 .footer-bottom {
+
     margin-top: 40px;
+
     padding-top: 20px;
 
-    border-top: 1px solid rgba(244, 211, 103, .3);
+    border-top: 1px solid rgba(244,211,103,.3);
 
     text-align: center;
+
 }
 
 
 .footer-bottom p {
+
     color: white;
+
     font-size: 13px;
+
     margin: 0;
+
 }
 
 
-
-/* =====================================================
+/* ======================================================
                        TABLET
-===================================================== */
+====================================================== */
 
 @media (max-width: 900px) {
 
-    .ec-row {
-        gap: 35px;
+    .team-header h1 {
+
+        font-size: 60px;
+
     }
 
 
-    .branches {
-        gap: 25px;
+    .ec-photo {
+
+        aspect-ratio: 4 / 4.8;
+
     }
 
 
-    .member-photo {
-        width: 65px;
-        height: 65px;
+    .oc-photo {
+
+        width: 280px;
+
     }
 
 }
 
 
-
-/* =====================================================
+/* ======================================================
                        MOBILE
-===================================================== */
+====================================================== */
 
 @media (max-width: 768px) {
 
     .team-header {
-        padding-top: 120px;
+
+        padding-top: 130px;
+
+        padding-bottom: 60px;
+
     }
 
 
-    .section-heading h2 {
-        font-size: 35px;
+    .team-header h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .team-header p {
+
+        font-size: 15px;
+
+    }
+
+
+    .team-section-heading h2 {
+
+        font-size: 32px;
+
+    }
+
+
+    .ec-section {
+
+        padding-bottom: 80px;
+
     }
 
 
     .ec-row {
-        gap: 20px;
-    }
 
+        max-width: 650px;
 
-    .ec-member {
-        width: 120px;
     }
 
 
     .ec-photo {
-        width: 100px;
-        height: 100px;
+
+        aspect-ratio: 4 / 4.8;
+
     }
 
 
-    .ec-member h3 {
-        font-size: 14px;
+    .photo-overlay h3 {
+
+        font-size: 18px;
+
     }
 
 
-    .ec-member p {
-        font-size: 8px;
+    .photo-overlay span {
+
+        font-size: 11px;
+
     }
 
 
     .president-card {
-        padding: 10px 20px 10px 10px;
+
+        width: 270px;
+
     }
 
 
-    .president-photo {
-        width: 85px;
-        height: 85px;
+    .oc-section {
+
+        padding-top: 70px;
+
     }
 
 
-    .president-info h2 {
-        font-size: 18px;
+    #ocCarousel {
+
+        padding: 0 42px;
+
     }
 
 
-    .branches {
-        grid-template-columns: 1fr;
-        gap: 45px;
+    .oc-photo {
+
+        width: 250px;
+
+        border-radius: 18px;
+
     }
 
 
-    .branches::before {
-        display: none;
+    .oc-photo-info h3 {
+
+        font-size: 17px;
+
     }
 
 
-    .branch-title {
-        border-bottom: 1px solid rgba(244, 211, 103, .2);
-        padding-bottom: 15px;
+    .oc-photo-info p {
+
+        font-size: 12px;
+
     }
 
 
-    .branch-right .tree-member:hover,
-    .tree-member:hover {
-        transform: translateY(-5px);
+    .carousel-control-prev,
+    .carousel-control-next {
+
+        width: 40px;
+
+        height: 40px;
+
+    }
+
+
+    .main-footer {
+
+        text-align: center;
+
     }
 
 }
 
 
-
-/* =====================================================
-                     SMALL MOBILE
-===================================================== */
+/* ======================================================
+                    SMALL MOBILE
+====================================================== */
 
 @media (max-width: 480px) {
 
     .team-header {
-        padding: 110px 15px 60px;
+
+        padding-top: 115px;
+
     }
 
 
     .team-header h1 {
-        font-size: 42px;
+
+        font-size: 40px;
+
+    }
+
+
+    .team-kicker {
+
+        font-size: 9px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .team-section-heading h2 {
+
+        font-size: 27px;
+
     }
 
 
     .ec-row {
-        gap: 8px;
-    }
 
+        padding: 0 20px;
 
-    .ec-member {
-        width: 105px;
     }
 
 
     .ec-photo {
-        width: 82px;
-        height: 82px;
-    }
 
+        aspect-ratio: 4 / 4.8;
 
-    .ec-member h3 {
-        font-size: 12px;
-    }
-
-
-    .ec-member p {
-        font-size: 7px;
     }
 
 
     .president-card {
-        border-radius: 25px;
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
+
+        width: 240px;
+
     }
 
 
-    .member-photo {
-        width: 60px;
-        height: 60px;
+    #ocCarousel {
+
+        padding: 0 35px;
+
     }
 
 
-    .member-info h4 {
-        font-size: 12px;
+    .oc-photo {
+
+        width: 220px;
+
+        border-radius: 16px;
+
     }
 
 
-    .member-info p {
-        font-size: 8px;
+    .oc-photo-info {
+
+        padding: 45px 15px 15px;
+
+    }
+
+
+    .oc-photo-info h3 {
+
+        font-size: 15px;
+
+    }
+
+
+    .oc-photo-info p {
+
+        font-size: 11px;
+
+    }
+
+
+    .carousel-control-prev,
+    .carousel-control-next {
+
+        width: 34px;
+
+        height: 34px;
+
+    }
+
+
+    .swipe-hint {
+
+        font-size: 10px;
+
+    }
+
+
+    .footer-title {
+
+        font-size: 26px;
+
     }
 
 }
