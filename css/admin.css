@@ -461,7 +461,37 @@ body {
 
 }
 
+/* =====================================================
+   DELETE BUTTON
+===================================================== */
 
+.delete-btn {
+
+    border: none;
+
+    background: rgba(239, 68, 68, .15);
+
+    color: #f87171;
+
+    padding: 7px 12px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    margin-left: 6px;
+
+    transition: .3s;
+
+}
+
+.delete-btn:hover {
+
+    background: rgba(239, 68, 68, .25);
+
+    color: #fca5a5;
+
+}
 
 /* =====================================================
    LOADING

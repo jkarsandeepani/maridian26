@@ -12,7 +12,9 @@ import {
     db,
     auth,
     collection,
-    getDocs
+    getDocs,
+    doc,
+    deleteDoc
 } from "./firebase.js";
 
 import {
@@ -331,17 +333,27 @@ function displayDelegates() {
 
                 <td>
 
-                    <button
-                        class="view-btn"
-                        data-id="${data.id}">
+    <button
+        class="view-btn"
+        data-id="${data.id}">
 
-                        <i class="bi bi-eye"></i>
+        <i class="bi bi-eye"></i>
 
-                        View
+        View
 
-                    </button>
+    </button>
 
-                </td>
+    <button
+        class="delete-btn"
+        data-id="${data.id}">
+
+        <i class="bi bi-trash"></i>
+
+        Delete
+
+    </button>
+
+</td>
 
             `;
 
@@ -357,6 +369,19 @@ function displayDelegates() {
                     }
                 );
 
+row
+    .querySelector(".delete-btn")
+    .addEventListener(
+        "click",
+        function () {
+
+            deleteRegistration(
+                data.id,
+                data.fullName
+            );
+
+        }
+    );
 
             tbody.appendChild(row);
 
@@ -451,20 +476,28 @@ function displayIndividuals() {
                     ${safe(data.batch)}
                 </td>
 
+<td>
 
-                <td>
+    <button
+        class="view-btn">
 
-                    <button
-                        class="view-btn">
+        <i class="bi bi-eye"></i>
 
-                        <i class="bi bi-eye"></i>
+        View
 
-                        View
+    </button>
 
-                    </button>
+    <button
+        class="delete-btn"
+        data-id="${data.id}">
 
-                </td>
+        <i class="bi bi-trash"></i>
 
+        Delete
+
+    </button>
+
+</td>
             `;
 
 
@@ -478,7 +511,19 @@ function displayIndividuals() {
 
                     }
                 );
+row
+    .querySelector(".delete-btn")
+    .addEventListener(
+        "click",
+        function () {
 
+            deleteRegistration(
+                data.id,
+                data.fullName || data.name
+            );
+
+        }
+    );
 
             tbody.appendChild(row);
 
@@ -589,19 +634,28 @@ function displayGroups() {
 
                 </td>
 
+<td>
 
-                <td>
+    <button
+        class="view-btn">
 
-                    <button
-                        class="view-btn">
+        <i class="bi bi-eye"></i>
 
-                        <i class="bi bi-eye"></i>
+        View
 
-                        View
+    </button>
 
-                    </button>
+    <button
+        class="delete-btn"
+        data-id="${data.id}">
 
-                </td>
+        <i class="bi bi-trash"></i>
+
+        Delete
+
+    </button>
+
+</td>
 
             `;
 
@@ -617,6 +671,19 @@ function displayGroups() {
                     }
                 );
 
+row
+    .querySelector(".delete-btn")
+    .addEventListener(
+        "click",
+        function () {
+
+            deleteRegistration(
+                data.id,
+                data.groupName
+            );
+
+        }
+    );
 
             tbody.appendChild(row);
 
@@ -625,7 +692,59 @@ function displayGroups() {
 
 }
 
+/* =========================================================
+   DELETE REGISTRATION
+========================================================= */
 
+async function deleteRegistration(id, name) {
+
+    const confirmed = confirm(
+        `Are you sure you want to delete the registration for "${name}"?`
+    );
+
+    if (!confirmed) {
+
+        return;
+
+    }
+
+    try {
+
+        console.log(
+            "Deleting registration:",
+            id
+        );
+
+        await deleteDoc(
+            doc(
+                db,
+                "registrations",
+                id
+            )
+        );
+
+        alert(
+            "Registration deleted successfully."
+        );
+
+        await loadRegistrations();
+
+    }
+
+    catch (error) {
+
+        console.error(
+            "Error deleting registration:",
+            error
+        );
+
+        alert(
+            "Failed to delete the registration. Please try again."
+        );
+
+    }
+
+}
 
 /* =========================================================
    SHOW DETAILS

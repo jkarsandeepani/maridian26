@@ -5,6 +5,8 @@ import {
     collection,
     addDoc,
     getDocs,
+    doc,
+    deleteDoc,
     serverTimestamp
 } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
 
@@ -34,5 +36,7 @@ export {
     collection,
     addDoc,
     getDocs,
+    doc,
+    deleteDoc,
     serverTimestamp
 };
