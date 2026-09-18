@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,29 +7,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title> MARIDIAN '26 | Shop</title>
+    <title>MARIDIAN '26 | Shop</title>
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet">
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet"
+    <link
+        rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-        <!-- Main Website CSS -->
-<link rel="stylesheet" href="../css/style.css">
+    <!-- Main Website CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
     <!-- Shop CSS -->
     <link rel="stylesheet" href="../css/shop.css">
 
 </head>
 
+
 <body>
 
-    <!-- =====================================================
+
+<!-- =====================================================
                         NAVBAR
 ===================================================== -->
 
@@ -51,7 +59,6 @@
                     MARIDIAN'26
                 </h5>
 
-            
             </div>
 
         </a>
@@ -116,7 +123,7 @@
 
                 <li class="nav-item">
                     <a
-                        class="nav-link"
+                        class="nav-link active"
                         href="shop.html">
                         Shop
                     </a>
@@ -124,6 +131,8 @@
 
             </ul>
 
+
+            <!-- CART ICON -->
 
             <div class="d-flex align-items-center">
 
@@ -152,320 +161,621 @@
 </nav>
 
 
-    <!-- ==========================================
-                    HERO
-    =========================================== -->
 
-    <section class="shop-hero">
+<!-- =====================================================
+                        SHOP HERO
+===================================================== -->
 
-        <div class="container text-center">
+<section class="shop-hero">
 
-            <span class="badge bg-warning text-dark px-4 py-2 mb-3">
+    <div class="container text-center">
 
-                OFFICIAL MERCHANDISE
+        <span class="badge bg-warning text-dark px-4 py-2 mb-3">
 
+            OFFICIAL MERCHANDISE
+
+        </span>
+
+        <h1>
+            MARIDIAN Shop
+        </h1>
+
+        <p>
+
+            Own the official merchandise and make your
+            MARIDIAN experience unforgettable.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+                    PRODUCTS SECTION
+===================================================== -->
+
+<section class="shop-products-section">
+
+    <div class="container">
+
+        <div class="text-center shop-section-title">
+
+            <span>
+                MARIDIAN '26
             </span>
 
-            <h1>
-
-              MARIDIAN Shop
-
-            </h1>
+            <h2>
+                Our Merchandise
+            </h2>
 
             <p>
-
-                Own the official merchandise and make your MARIDIAN
-                experience unforgettable.
-
+                Choose your favourite MARIDIAN merchandise.
             </p>
 
         </div>
 
-    </section>
 
-    <!-- ==========================================
-                SEARCH & FILTER
-    =========================================== -->
-
-    <section class="container mb-5">
-
-        <div class="row g-3">
-
-            <div class="col-lg-8">
-
-                <input
-                    type="text"
-                    id="searchBox"
-                    class="form-control"
-                    placeholder="Search merchandise...">
-
-            </div>
-
-            <div class="col-lg-4">
-
-                <select
-                    id="categoryFilter"
-                    class="form-select">
-
-                    <option value="all">
-
-                        All Categories
-
-                    </option>
-
-                    <option value="Clothing">
-
-                        Clothing
-
-                    </option>
-
-                    <option value="Accessories">
-
-                        Accessories
-
-                    </option>
-
-                    <option value="Drinkware">
-
-                        Drinkware
-
-                    </option>
-                    <option value="Stationery">Stationery</option>
-                    <option value="Bundle">Bundle</option>
-                </select>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- ==========================================
-                    PRODUCTS
-    =========================================== -->
-
-    <section class="container mb-5">
-
-        <div class="row g-4"
+        <div
+            class="row g-4 justify-content-center"
             id="productContainer">
 
-            <!-- Products generated by shop.js -->
+
+            <!-- =================================================
+                            T-SHIRT
+            ================================================== -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div
+                    class="shop-product-card"
+                    data-product="tshirt">
+
+
+                    <!-- PRODUCT IMAGE -->
+
+                    <div class="product-image-wrapper">
+
+                        <button
+                            class="product-arrow product-arrow-left"
+                            id="tshirtPrev"
+                            type="button">
+
+                            <i class="bi bi-chevron-left"></i>
+
+                        </button>
+
+
+                        <img
+                            id="tshirtImage"
+                            src="../imagess/4.jpg"
+                            alt="MARIDIAN T-Shirt"
+                            class="product-main-image">
+
+
+                        <button
+                            class="product-arrow product-arrow-right"
+                            id="tshirtNext"
+                            type="button">
+
+                            <i class="bi bi-chevron-right"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- PRODUCT DETAILS -->
+
+                    <div class="product-details">
+
+                        <h3>
+                            T-Shirt
+                        </h3>
+
+
+                        <p
+                            class="product-option-count"
+                            id="tshirtOptionCount">
+
+                            Option 1 / 3
+
+                        </p>
+
+
+                        <div class="product-price">
+
+                            Rs. <span id="tshirtPrice">
+                                1999
+                            </span>
+
+                        </div>
+
+
+                        <!-- SIZE -->
+
+                        <div class="size-selection">
+
+                            <label>
+                                T-Shirt Size
+                            </label>
+
+
+                            <div class="size-buttons">
+
+                                <button
+                                    type="button"
+                                    class="size-btn"
+                                    data-product="tshirt"
+                                    data-size="S">
+
+                                    S
+
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="size-btn"
+                                    data-product="tshirt"
+                                    data-size="M">
+
+                                    M
+
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="size-btn"
+                                    data-product="tshirt"
+                                    data-size="L">
+
+                                    L
+
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="size-btn"
+                                    data-product="tshirt"
+                                    data-size="XL">
+
+                                    XL
+
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="size-btn"
+                                    data-product="tshirt"
+                                    data-size="XXL">
+
+                                    XXL
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ADD TO CART -->
+
+                        <button
+                            type="button"
+                            class="add-cart-btn"
+                            id="addTshirtBtn">
+
+                            <i class="bi bi-cart-plus"></i>
+
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                                CAP
+            ================================================== -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div
+                    class="shop-product-card"
+                    data-product="cap">
+
+
+                    <!-- PRODUCT IMAGE -->
+
+                    <div class="product-image-wrapper">
+
+                        <img
+                            src="../imagess/7.jpg"
+                            alt="MARIDIAN Cap"
+                            class="product-main-image">
+
+                    </div>
+
+
+                    <!-- PRODUCT DETAILS -->
+
+                    <div class="product-details">
+
+                        <h3>
+                            Cap
+                        </h3>
+
+
+                        <p class="product-option-count">
+
+                            Official MARIDIAN Cap
+
+                        </p>
+
+
+                        <div class="product-price">
+
+                            Rs. <span id="capPrice">
+                                999
+                            </span>
+
+                        </div>
+
+
+                        <div class="no-options-message">
+
+                            <i class="bi bi-check-circle"></i>
+
+                            No options available
+
+                        </div>
+
+
+                        <!-- ADD TO CART -->
+
+                        <button
+                            type="button"
+                            class="add-cart-btn"
+                            id="addCapBtn">
+
+                            <i class="bi bi-cart-plus"></i>
+
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                            MERCH PACK
+            ================================================== -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div
+                    class="shop-product-card"
+                    data-product="merch-pack">
+
+
+                    <!-- PRODUCT IMAGE -->
+
+                    <div class="product-image-wrapper">
+
+                        <button
+                            class="product-arrow product-arrow-left"
+                            id="packPrev"
+                            type="button">
+
+                            <i class="bi bi-chevron-left"></i>
+
+                        </button>
+
+
+                        <img
+                            id="packImage"
+                            src="../imagess/1.jpg"
+                            alt="MARIDIAN Merch Pack"
+                            class="product-main-image">
+
+
+                        <button
+                            class="product-arrow product-arrow-right"
+                            id="packNext"
+                            type="button">
+
+                            <i class="bi bi-chevron-right"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- PRODUCT DETAILS -->
+
+                    <div class="product-details">
+
+                        <h3>
+                            Merch Pack
+                        </h3>
+
+
+                        <p
+                            class="product-option-count"
+                            id="packOptionCount">
+
+                            Pack 1 / 3
+
+                        </p>
+
+
+                        <div class="product-price">
+
+                            Rs. <span id="packPrice">
+                                4500
+                            </span>
+
+                        </div>
+
+
+                        <!-- T-SHIRT SIZE -->
+
+                        <div class="size-selection">
+
+                            <label>
+                                T-Shirt Size
+                            </label>
+
+
+                            <div class="size-buttons">
+
+                                <button
+                                    type="button"
+                                    class="size-btn"
+                                    data-product="pack"
+                                    data-size="S">
+
+                                    S
+
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="size-btn"
+                                    data-product="pack"
+                                    data-size="M">
+
+                                    M
+
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="size-btn"
+                                    data-product="pack"
+                                    data-size="L">
+
+                                    L
+
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="size-btn"
+                                    data-product="pack"
+                                    data-size="XL">
+
+                                    XL
+
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="size-btn"
+                                    data-product="pack"
+                                    data-size="XXL">
+
+                                    XXL
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ADD TO CART -->
+
+                        <button
+                            type="button"
+                            class="add-cart-btn"
+                            id="addPackBtn">
+
+                            <i class="bi bi-cart-plus"></i>
+
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
 
         </div>
 
-    </section>
+    </div>
 
-    <!-- ==========================================
-                    FOOTER
-    =========================================== -->
+</section>
 
-    <footer class="main-footer">
 
 
-<div class="container">
+<!-- =====================================================
+                        FOOTER
+===================================================== -->
 
+<footer class="main-footer">
 
-<div class="row g-4">
+    <div class="container">
 
+        <div class="row g-4">
 
 
-<!-- SECTION 1 : EVENT DETAILS -->
+            <!-- SECTION 1 : EVENT DETAILS -->
 
+            <div class="col-lg-4 col-md-6">
 
-<div class="col-lg-4 col-md-6">
+                <h3 class="footer-title">
+                    MARIDIAN '26
+                </h3>
 
+                <p class="footer-text">
 
-<h3 class="footer-title">
+                    A global cultural experience connecting people,
+                    ideas, and communities through unforgettable
+                    moments.
 
-MARIDIAN '26
+                </p>
 
-</h3>
+            </div>
 
 
-<p class="footer-text">
 
-A global cultural experience connecting people,
-ideas, and communities through unforgettable
-moments.
+            <!-- SECTION 2 : INFORMATION -->
 
-</p>
+            <div class="col-lg-2 col-md-6">
 
+                <h5 class="footer-heading">
+                    Information
+                </h5>
 
+                <ul class="footer-links">
 
+                    <li>
+                        <a href="../index.html">
+                            Home
+                        </a>
+                    </li>
 
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
 
-</div>
+                    <li>
+                        <a href="team.html">
+                            Dream Team
+                        </a>
+                    </li>
 
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
 
+                    <li>
+                        <a href="shop.html">
+                            Shop
+                        </a>
+                    </li>
 
+                </ul>
 
+            </div>
 
 
 
-<!-- SECTION 2 : INFORMATION -->
+            <!-- SECTION 3 : AIESEC NSBM -->
 
+            <div class="col-lg-3 col-md-6 text-center">
 
-<div class="col-lg-2 col-md-6">
+                <h5 class="footer-heading">
+                    Organized By
+                </h5>
 
+                <img
+                    src="../imagess/club-logo.jpg"
+                    class="footer-logo"
+                    alt="AIESEC NSBM">
 
-<h5 class="footer-heading">
+                <p class="footer-text">
+                    AIESEC IN NSBM
+                </p>
 
-Information
+            </div>
 
-</h5>
 
 
+            <!-- SECTION 4 : NSBM -->
 
-<ul class="footer-links">
+            <div class="col-lg-3 col-md-6 text-center">
 
+                <h5 class="footer-heading">
+                    Sponsored By
+                </h5>
 
-<li>
-<a href="../index.html">
-Home
-</a>
-</li>
+                <img
+                    src="../imagess/aiesec-logo1.png"
+                    class="footer-logo"
+                    alt="NSBM Green University">
 
+                <p class="footer-text">
+                    NSBM Green University
+                </p>
 
-<li>
-<a href="about.html">
-About
-</a>
-</li>
+            </div>
 
 
-<li>
-<a href="team.html">
-Dream Team
-</a>
-</li>
+        </div>
 
 
-<li>
-<a href="contact.html">
-Contact
-</a>
-</li>
+        <div class="footer-bottom">
 
+            <p>
+                © 2026 MARIDIAN '26 | AIESEC NSBM
+            </p>
 
-<li>
-<a href="shop.html">
-Shop
-</a>
-</li>
+        </div>
 
+    </div>
 
-</ul>
+</footer>
 
 
-</div>
 
+<!-- =====================================================
+                    BOOTSTRAP JS
+===================================================== -->
 
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
+</script>
 
 
+<!-- =====================================================
+                        SHOP JS
+===================================================== -->
 
+<script src="../js/shop.js"></script>
 
-
-
-
-<!-- SECTION 3 : AIESEC NSBM -->
-
-
-<div class="col-lg-3 col-md-6 text-center">
-
-
-<h5 class="footer-heading">
-
-Organized By
-
-</h5>
-
-
-
-<img src="../imagess/club-logo.jpg"
-class="footer-logo"
-alt="AIESEC NSBM">
-
-
-
-<p class="footer-text">
-
-AIESEC IN NSBM
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-
-
- <!-- SECTION 4 : AIESEC SRI LANKA -->
-
-
-<div class="col-lg-3 col-md-6 text-center">
-
-
-<h5 class="footer-heading">
-
-Sponserd By
-
-</h5>
-
-
-
-<img src="../imagess/aiesec-logo1.png"
-class="footer-logo"
-alt="AIESEC Sri Lanka">
-
-
-
-<p class="footer-text">
-
-NSBM Green University
-
-</p>
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-
-
-
-
-<div class="footer-bottom">
-
-
-<p>
-
-© 2026 MARIDIAN '26 | AIESEC NSBM
-
-</p>
-
-
-</div>
-
-
-
-</div>
-
-    <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Shop JS -->
-    <script src="../js/shop.js"></script>
 
 </body>
 
 </html>
+

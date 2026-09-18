@@ -8,51 +8,63 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-    <title>Review Order | Global Village 5.0</title>
+    <title>Payment | MARIDIAN '26</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
         rel="stylesheet">
 
-    <link rel="stylesheet"
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-    <link rel="stylesheet" href="../css/style.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet"
+        href="../css/style.css">
 
-    <link rel="stylesheet" href="../css/payment.css">
+    <!-- Payment CSS -->
+    <link rel="stylesheet"
+        href="../css/payment.css">
 
 </head>
 
 <body>
 
-    <!-- HEADER -->
+
+    <!-- ================================
+         PAYMENT HEADER
+    ================================= -->
 
     <section class="payment-header">
 
         <div class="container text-center">
 
             <h1>
-
                 Review Your Order
-
             </h1>
 
             <p>
-
                 Please review your order carefully before confirming.
-
             </p>
 
         </div>
 
     </section>
 
+
+
     <section class="container py-5">
 
-        <!-- CUSTOMER INFORMATION -->
+
+        <!-- ================================
+             CUSTOMER INFORMATION
+        ================================= -->
 
         <div class="payment-card mb-4">
 
-            <h3>
+            <h3 class="payment-title">
 
                 <i class="bi bi-person-circle"></i>
 
@@ -62,47 +74,42 @@
 
             <hr>
 
-            <p>
 
-                <strong>Full Name :</strong>
+            <div class="customer-info">
 
-                <span id="customerName"></span>
+                <p>
+                    <strong>Full Name :</strong>
+                    <span id="customerName"></span>
+                </p>
 
-            </p>
+                <p>
+                    <strong>Email :</strong>
+                    <span id="customerEmail"></span>
+                </p>
 
-            <p>
+                <p>
+                    <strong>Phone :</strong>
+                    <span id="customerPhone"></span>
+                </p>
 
-                <strong>Email :</strong>
+                <p>
+                    <strong>Batch :</strong>
+                    <span id="customerBatch"></span>
+                </p>
 
-                <span id="customerEmail"></span>
-
-            </p>
-
-            <p>
-
-                <strong>Phone :</strong>
-
-                <span id="customerPhone"></span>
-
-            </p>
-
-            <p>
-
-                <strong>Batch :</strong>
-
-                <span id="customerBatch"></span>
-
-            </p>
-
-           
+            </div>
 
         </div>
 
-        <!-- ORDER SUMMARY -->
+
+
+        <!-- ================================
+             ORDER SUMMARY
+        ================================= -->
 
         <div class="payment-card mb-4">
 
-            <h3>
+            <h3 class="payment-title">
 
                 <i class="bi bi-bag-check-fill"></i>
 
@@ -112,35 +119,40 @@
 
             <hr>
 
+
             <div id="paymentSummary">
+
+                <!-- JavaScript loads order -->
 
             </div>
 
+
             <hr>
 
-            <div class="d-flex justify-content-between">
+
+            <div class="total-row">
 
                 <strong>
-
                     Total
-
                 </strong>
 
                 <strong id="paymentTotal">
-
                     Rs. 0
-
                 </strong>
 
             </div>
 
         </div>
 
-        <!-- PAYMENT DETAILS -->
+
+
+        <!-- ================================
+             PAYMENT DETAILS
+        ================================= -->
 
         <div class="payment-card mb-4">
 
-            <h3>
+            <h3 class="payment-title">
 
                 <i class="bi bi-bank2"></i>
 
@@ -150,47 +162,38 @@
 
             <hr>
 
-            <p>
 
-                <strong>Bank Name :</strong>
+            <div class="bank-details">
 
-                Commercial Bank
+                <p>
+                    <strong>Bank Name :</strong>
+                    Sampath bank
+                </p>
 
-            </p>
+                <p>
+                    <strong>Account Name :</strong>
+                   Senuri Jayasinghe
+                </p>
 
-            <p>
+                <p>
+                    <strong>Account Number :</strong>
+                 1175 5253 4515
+                </p>
 
-                <strong>Account Name :</strong>
+                <p>
+                    <strong>Branch :</strong>
+                    Colombo super
+                </p>
 
-                AIESEC in NSBM
+                <p>
+                    <strong>Payment Reference :</strong>
+                    Use your Student ID
+                </p>
 
-            </p>
+            </div>
 
-            <p>
 
-                <strong>Account Number :</strong>
-
-                1234567890
-
-            </p>
-
-            <p>
-
-                <strong>Branch :</strong>
-
-                Homagama Branch
-
-            </p>
-
-            <p>
-
-                <strong>Payment Reference :</strong>
-
-                Use your Student ID
-
-            </p>
-
-            <div class="alert alert-warning mt-3">
+            <div class="payment-alert">
 
                 <i class="bi bi-info-circle-fill"></i>
 
@@ -200,11 +203,15 @@
 
         </div>
 
-        <!-- PAYMENT RECEIPT -->
+
+
+        <!-- ================================
+             PAYMENT RECEIPT
+        ================================= -->
 
         <div class="payment-card">
 
-            <h3>
+            <h3 class="payment-title">
 
                 <i class="bi bi-cloud-arrow-up-fill"></i>
 
@@ -214,25 +221,24 @@
 
             <hr>
 
-            <label class="form-label">
+
+            <label
+                for="paymentSlip"
+                class="form-label">
 
                 Choose Payment Receipt
 
             </label>
 
+
             <input
-
                 type="file"
-
                 class="form-control"
-
                 id="paymentSlip"
+                accept=".jpg,.jpeg,.png">
 
-                accept=".jpg,.jpeg,.png"
 
-            >
-
-            <small class="text-light">
+            <small class="file-info">
 
                 Accepted formats: JPG, JPEG, PNG
 
@@ -242,38 +248,30 @@
 
             </small>
 
+
+            <!-- PREVIEW -->
+
             <div class="text-center mt-4">
 
                 <img
-
                     id="previewImage"
-
                     src=""
-
-                    alt="Payment Preview"
-
-                    style="display:none; max-width:300px; border-radius:15px;"
-
-                >
+                    alt="Payment Preview">
 
             </div>
+
+
+            <!-- CONFIRMATION -->
 
             <div class="form-check mt-4">
 
                 <input
-
                     class="form-check-input"
-
                     type="checkbox"
-
-                    id="confirmPayment"
-
-                >
+                    id="confirmPayment">
 
                 <label
-
                     class="form-check-label"
-
                     for="confirmPayment">
 
                     I confirm that I have completed the payment and uploaded the correct payment receipt.
@@ -282,10 +280,12 @@
 
             </div>
 
+
+            <!-- PLACE ORDER -->
+
             <button
-
+                type="button"
                 class="btn btn-warning w-100 mt-4"
-
                 id="placeOrder">
 
                 <i class="bi bi-check-circle-fill"></i>
@@ -296,9 +296,17 @@
 
         </div>
 
+
     </section>
 
-    <script type="module" src="../js/payment.js"></script>
+
+    <!-- Payment JS -->
+
+    <script
+        type="module"
+        src="../js/payment.js">
+    </script>
 
 </body>
+
 </html>

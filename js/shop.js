@@ -1,166 +1,120 @@
+
 /*=========================================================
-    GLOBAL VILLAGE 5.0 SHOP
+    MARIDIAN '26 SHOP
 =========================================================*/
+
 
 /*=========================================================
     PRODUCTS
 =========================================================*/
 
-const products = [
+
+/*
+    T-SHIRT
+    -------------------------------------------------------
+    Option 1 = White
+    Option 2 = Blue
+    Option 3 = Black
+*/
+
+const tshirtOptions = [
 
     {
-
-        id:1,
-
-        name:"Official T-Shirt",
-
-        description:"MARIDIAN official T-Shirt.",
-
-        price:2500,
-
-        stock:50,
-
-        category:"Clothing",
-
-        image:"../imagess/tee.jpg",
-
-        hasSize:true
-
+        id: "tshirt-white",
+        name: "Official T-Shirt",
+        option: "White",
+        color: "White",
+        price: 1890,
+        stock: 50,
+        category: "Clothing",
+        image: "../imagess/4.jpg"
     },
 
     {
-
-        id:2,
-
-        name:"Event Cap",
-
-        description:"Limited edition MARIDIAN cap.",
-
-        price:1200,
-
-        stock:40,
-
-        category:"Clothing",
-
-        image:"../imagess/cap.jpg",
-        hasSize:false
-
-    },
-
-   
-    {
-
-        id:3,
-
-        name:"Tote Bag",
-
-        description:"Eco-friendly tote bag.",
-
-        price:1800,
-
-        stock:25,
-
-        category:"Accessories",
-
-        image:"../imagess/tote bag.jpg",
-         hasSize:false
-
+        id: "tshirt-blue",
+        name: "Official T-Shirt",
+        option: "Blue",
+        color: "Blue",
+        price: 1999,
+        stock: 50,
+        category: "Clothing",
+        image: "../imagess/6.jpg"
     },
 
     {
-    id:4,
+        id: "tshirt-black",
+        name: "Official T-Shirt",
+        option: "Black",
+        color: "Black",
+        price: 1999,
+        stock: 50,
+        category: "Clothing",
+        image: "../imagess/5.jpg"
+    }
 
-    name:"Official Pen",
+];
 
-    description:"Premium MARIDIAN branded pen for everyday use.",
 
-    price:350,
+/*
+    CAP
+    -------------------------------------------------------
+*/
 
-    stock:100,
+const capProduct = {
 
-    category:"Stationery",
+    id: "cap",
+    name: "Event Cap",
+    option: "Official MARIDIAN Cap",
+    price: 900,
+    stock: 40,
+    category: "Clothing",
+    image: "../imagess/7.jpg"
 
-    image:"../imagess/pen.jpg",
+};
 
-    hasSize:false
 
-},
+/*
+    MERCH PACK
+    -------------------------------------------------------
+    Pack 1 = White
+    Pack 2 = Blue
+    Pack 3 = Black
+*/
 
-{
-    id:5,
+const merchPackOptions = [
 
-    name:"Official Key Tag",
+    {
+        id: "pack-white",
+        name: "MARIDIAN Merch Pack",
+        option: "White T-Shirt Pack",
+        color: "White",
+        price: 2599,
+        stock: 20,
+        category: "Bundle",
+        image: "../imagess/1.jpg"
+    },
 
-    description:"Exclusive MARIDIAN acrylic key tag.",
+    {
+        id: "pack-blue",
+        name: "MARIDIAN Merch Pack",
+        option: "Blue T-Shirt Pack",
+        color: "Blue",
+        price: 2699,
+        stock: 20,
+        category: "Bundle",
+        image: "../imagess/3.jpg"
+    },
 
-    price:450,
-
-    stock:80,
-
-    category:"Accessories",
-
-    image:"../imagess/key tag.jpg",
-
-    hasSize:false
-
-},
-
-{
-    id:6,
-
-    name:"Nail Art Stickers",
-
-    description:"Limited edition MARIDIAN themed nail art stickers.",
-
-    price:500,
-
-    stock:60,
-
-    category:"Accessories",
-
-    image:"../imagess/nail art.jpg",
-
-    hasSize:false
-
-},
-
-{
-    id:7,
-
-    name:"Official Notebook",
-
-    description:"Premium MARIDIAN notebook with custom cover design.",
-
-    price:850,
-
-    stock:70,
-
-    category:"Stationery",
-
-    image:"../imagess/note.jpg",
-
-    hasSize:false
-
-},
-
-{
-    id:8,
-
-    name:"MARIDIAN Merch Pack",
-
-    description:"Special bundle including T-Shirt, Cap, Notebook, Pen and Key Tag.",
-
-    price:4900,
-
-    stock:20,
-
-    category:"Bundle",
-
-    image:"../imagess/merch pack.jpg",
-
-    hasSize:true
-
-},
+    {
+        id: "pack-black",
+        name: "MARIDIAN Merch Pack",
+        option: "Black T-Shirt Pack",
+        color: "Black",
+        price: 2699,
+        stock: 20,
+        category: "Bundle",
+        image: "../imagess/2.jpg"
+    }
 
 ];
 
@@ -169,152 +123,115 @@ const products = [
     HTML ELEMENTS
 =========================================================*/
 
-const productContainer=document.getElementById("productContainer");
+const tshirtImage =
+    document.getElementById("tshirtImage");
 
-const searchBox=document.getElementById("searchBox");
+const tshirtPrice =
+    document.getElementById("tshirtPrice");
 
-const categoryFilter=document.getElementById("categoryFilter");
+const tshirtOptionCount =
+    document.getElementById("tshirtOptionCount");
 
-const cartCount=document.getElementById("cartCount");
 
+const packImage =
+    document.getElementById("packImage");
+
+const packPrice =
+    document.getElementById("packPrice");
+
+const packOptionCount =
+    document.getElementById("packOptionCount");
+
+
+const capPrice =
+    document.getElementById("capPrice");
+
+
+const cartCount =
+    document.getElementById("cartCount");
+
+
+/*=========================================================
+    CURRENT OPTIONS
+=========================================================*/
+
+let tshirtIndex = 0;
+
+let packIndex = 0;
+
+
+/*=========================================================
+    SELECTED SIZES
+=========================================================*/
+
+let selectedTshirtSize = "";
+
+let selectedPackSize = "";
 
 
 /*=========================================================
     LOAD CART
 =========================================================*/
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart =
+    JSON.parse(localStorage.getItem("cart")) || [];
+
 
 updateCartCount();
 
 
 /*=========================================================
-    DISPLAY PRODUCTS
+    UPDATE T-SHIRT
 =========================================================*/
 
-function displayProducts(productList){
+function updateTshirt() {
 
-    productContainer.innerHTML="";
+    const product =
+        tshirtOptions[tshirtIndex];
 
-    productList.forEach(product=>{
 
-        productContainer.innerHTML+=`
+    tshirtImage.src =
+        product.image;
 
-        <div class="col-lg-3 col-md-6">
 
-            <div class="product-card">
+    tshirtImage.alt =
+        product.name + " - " + product.color;
 
-                <img
-                    src="${product.image}"
-                    class="product-image"
-                    alt="${product.name}">
 
-                <div class="product-body">
+    tshirtPrice.textContent =
+        product.price.toLocaleString();
 
-                    <span class="badge bg-warning text-dark mb-2">
 
-                        ${product.category}
+    tshirtOptionCount.textContent =
+        `Option ${tshirtIndex + 1} / ${tshirtOptions.length}`;
 
-                    </span>
+}
 
-                    <h4 class="product-title">
 
-                        ${product.name}
+/*=========================================================
+    T-SHIRT PREVIOUS
+=========================================================*/
 
-                    </h4>
+const tshirtPrev =
+    document.getElementById("tshirtPrev");
 
-                    <p class="product-description">
 
-                        ${product.description}
+if (tshirtPrev) {
 
-                    </p>
+    tshirtPrev.addEventListener("click", function () {
 
-                    <div class="product-price">
+        tshirtIndex--;
 
-                        Rs. ${product.price.toLocaleString()}
 
-                    </div>
+        if (tshirtIndex < 0) {
 
-                    <div class="stock">
+            tshirtIndex =
+                tshirtOptions.length - 1;
 
-                        ${product.stock} In Stock
+        }
 
-                    </div>
-                    ${product.hasSize ? `
 
-<select
-    class="form-select mt-3"
-    id="size-${product.id}">
-
-    <option value="">Select Size</option>
-
-    <option value="XS">XS</option>
-
-    <option value="S">S</option>
-
-    <option value="M">M</option>
-
-    <option value="L">L</option>
-
-    <option value="XL">XL</option>
-
-    <option value="XXL">XXL</option>
-
-</select>
-
-` : ""}
-
-                    <div class="text-warning mt-3">
-
-                        ★★★★★
-
-                    </div>
-
-                    <div class="quantity-box">
-
-                        <button
-                            class="qty-btn"
-                            onclick="changeQty(${product.id},-1)">
-
-                            -
-
-                        </button>
-
-                        <div
-                            class="qty"
-                            id="qty-${product.id}">
-
-                            1
-
-                        </div>
-
-                        <button
-                            class="qty-btn"
-                            onclick="changeQty(${product.id},1)">
-
-                            +
-
-                        </button>
-
-                    </div>
-
-                    <button
-                        class="cart-btn"
-                        onclick="addToCart(${product.id})">
-
-                        <i class="bi bi-cart-plus"></i>
-
-                        Add To Cart
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        `;
+        updateTshirt();
 
     });
 
@@ -322,47 +239,209 @@ function displayProducts(productList){
 
 
 /*=========================================================
-    QUANTITY
+    T-SHIRT NEXT
 =========================================================*/
 
-window.changeQty=function(id,change){
+const tshirtNext =
+    document.getElementById("tshirtNext");
 
-    const qty=document.getElementById(`qty-${id}`);
 
-    let value=parseInt(qty.textContent);
+if (tshirtNext) {
 
-    value+=change;
+    tshirtNext.addEventListener("click", function () {
 
-    if(value<1){
+        tshirtIndex++;
 
-        value=1;
 
-    }
+        if (tshirtIndex >= tshirtOptions.length) {
 
-    qty.textContent=value;
+            tshirtIndex = 0;
+
+        }
+
+
+        updateTshirt();
+
+    });
 
 }
 
 
 /*=========================================================
-    ADD TO CART
+    UPDATE MERCH PACK
 =========================================================*/
 
-window.addToCart = function(id){
+function updatePack() {
 
-    const product = products.find(item => item.id === id);
+    const product =
+        merchPackOptions[packIndex];
 
-    const quantity = parseInt(
-        document.getElementById(`qty-${id}`).textContent
-    );
 
-    let size = "";
+    packImage.src =
+        product.image;
 
-    if(product.hasSize){
 
-        size = document.getElementById(`size-${id}`).value;
+    packImage.alt =
+        product.name + " - " + product.color;
 
-        if(size === ""){
+
+    packPrice.textContent =
+        product.price.toLocaleString();
+
+
+    packOptionCount.textContent =
+        `Pack ${packIndex + 1} / ${merchPackOptions.length}`;
+
+}
+
+
+/*=========================================================
+    PACK PREVIOUS
+=========================================================*/
+
+const packPrev =
+    document.getElementById("packPrev");
+
+
+if (packPrev) {
+
+    packPrev.addEventListener("click", function () {
+
+        packIndex--;
+
+
+        if (packIndex < 0) {
+
+            packIndex =
+                merchPackOptions.length - 1;
+
+        }
+
+
+        updatePack();
+
+    });
+
+}
+
+
+/*=========================================================
+    PACK NEXT
+=========================================================*/
+
+const packNext =
+    document.getElementById("packNext");
+
+
+if (packNext) {
+
+    packNext.addEventListener("click", function () {
+
+        packIndex++;
+
+
+        if (packIndex >= merchPackOptions.length) {
+
+            packIndex = 0;
+
+        }
+
+
+        updatePack();
+
+    });
+
+}
+
+
+/*=========================================================
+    SIZE BUTTONS
+=========================================================*/
+
+const sizeButtons =
+    document.querySelectorAll(".size-btn");
+
+
+sizeButtons.forEach(button => {
+
+    button.addEventListener("click", function () {
+
+        const product =
+            this.dataset.product;
+
+
+        const size =
+            this.dataset.size;
+
+
+        /*
+            T-SHIRT SIZE
+        */
+
+        if (product === "tshirt") {
+
+            selectedTshirtSize =
+                size;
+
+        }
+
+
+        /*
+            MERCH PACK SIZE
+        */
+
+        if (product === "pack") {
+
+            selectedPackSize =
+                size;
+
+        }
+
+
+        /*
+            Remove selected class
+            from the same product
+        */
+
+        document
+            .querySelectorAll(
+                `.size-btn[data-product="${product}"]`
+            )
+            .forEach(btn => {
+
+                btn.classList.remove("selected");
+
+            });
+
+
+        /*
+            Select clicked button
+        */
+
+        this.classList.add("selected");
+
+    });
+
+});
+
+
+/*=========================================================
+    ADD T-SHIRT TO CART
+=========================================================*/
+
+const addTshirtBtn =
+    document.getElementById("addTshirtBtn");
+
+
+if (addTshirtBtn) {
+
+    addTshirtBtn.addEventListener("click", function () {
+
+        /*
+            Check size
+        */
+
+        if (selectedTshirtSize === "") {
 
             alert("Please select a T-Shirt size.");
 
@@ -370,105 +449,320 @@ window.addToCart = function(id){
 
         }
 
-    }
 
-    const existing = cart.find(item =>
-        item.id === id &&
-        item.size === size
-    );
+        const product =
+            tshirtOptions[tshirtIndex];
 
-    if(existing){
 
-        existing.quantity += quantity;
+        const quantity = 1;
 
-    }else{
 
-        cart.push({
+        /*
+            Same color + same size
+            = same cart item.
 
-            ...product,
+            Different color or size
+            = different cart item.
+        */
 
-            quantity,
+        const cartItemId =
+            `${product.id}-${selectedTshirtSize}`;
 
-            size
 
-        });
+        const existing =
+            cart.find(item =>
+                item.cartItemId === cartItemId
+            );
 
-    }
 
-    localStorage.setItem("cart", JSON.stringify(cart));
+        if (existing) {
 
-    updateCartCount();
+            existing.quantity += quantity;
 
-    alert(product.name + " added to cart!");
+        } else {
+
+            cart.push({
+
+                cartItemId: cartItemId,
+
+                id: product.id,
+
+                name: product.name,
+
+                description:
+                    "MARIDIAN official T-Shirt.",
+
+                option: product.option,
+
+                color: product.color,
+
+                price: product.price,
+
+                stock: product.stock,
+
+                category: product.category,
+
+                image: product.image,
+
+                size: selectedTshirtSize,
+
+                quantity: quantity
+
+            });
+
+        }
+
+
+        /*
+            Save cart
+        */
+
+        localStorage.setItem(
+            "cart",
+            JSON.stringify(cart)
+        );
+
+
+        updateCartCount();
+
+
+        alert(
+            product.name +
+            " - " +
+            product.color +
+            " - Size " +
+            selectedTshirtSize +
+            " added to cart!"
+        );
+
+    });
 
 }
 
-/*=========================================================
-    SEARCH
-=========================================================*/
-
-searchBox.addEventListener("input",function(){
-
-    const keyword=this.value.toLowerCase();
-
-    const filtered=products.filter(product=>
-
-        product.name.toLowerCase().includes(keyword)
-
-    );
-
-    displayProducts(filtered);
-
-});
-
 
 /*=========================================================
-    CATEGORY FILTER
+    ADD CAP TO CART
 =========================================================*/
 
-categoryFilter.addEventListener("change",function(){
+const addCapBtn =
+    document.getElementById("addCapBtn");
 
-    const category=this.value;
 
-    if(category==="all"){
+if (addCapBtn) {
 
-        displayProducts(products);
+    addCapBtn.addEventListener("click", function () {
 
-        return;
+        const quantity = 1;
 
-    }
 
-    const filtered=products.filter(product=>
+        const cartItemId =
+            "cap";
 
-        product.category===category
 
-    );
+        const existing =
+            cart.find(item =>
+                item.cartItemId === cartItemId
+            );
 
-    displayProducts(filtered);
 
-});
+        if (existing) {
+
+            existing.quantity += quantity;
+
+        } else {
+
+            cart.push({
+
+                cartItemId: cartItemId,
+
+                id: capProduct.id,
+
+                name: capProduct.name,
+
+                description:
+                    "Limited edition MARIDIAN cap.",
+
+                option: capProduct.option,
+
+                price: capProduct.price,
+
+                stock: capProduct.stock,
+
+                category: capProduct.category,
+
+                image: capProduct.image,
+
+                size: "",
+
+                quantity: quantity
+
+            });
+
+        }
+
+
+        localStorage.setItem(
+            "cart",
+            JSON.stringify(cart)
+        );
+
+
+        updateCartCount();
+
+
+        alert(
+            capProduct.name +
+            " added to cart!"
+        );
+
+    });
+
+}
+
+
+/*=========================================================
+    ADD MERCH PACK TO CART
+=========================================================*/
+
+const addPackBtn =
+    document.getElementById("addPackBtn");
+
+
+if (addPackBtn) {
+
+    addPackBtn.addEventListener("click", function () {
+
+        /*
+            Check size
+        */
+
+        if (selectedPackSize === "") {
+
+            alert(
+                "Please select a T-Shirt size for the Merch Pack."
+            );
+
+            return;
+
+        }
+
+
+        const product =
+            merchPackOptions[packIndex];
+
+
+        const quantity = 1;
+
+
+        /*
+            Same pack color + same size
+            = same cart item.
+        */
+
+        const cartItemId =
+            `${product.id}-${selectedPackSize}`;
+
+
+        const existing =
+            cart.find(item =>
+                item.cartItemId === cartItemId
+            );
+
+
+        if (existing) {
+
+            existing.quantity += quantity;
+
+        } else {
+
+            cart.push({
+
+                cartItemId: cartItemId,
+
+                id: product.id,
+
+                name: product.name,
+
+                description:
+                    "Special MARIDIAN merchandise bundle.",
+
+                option: product.option,
+
+                color: product.color,
+
+                price: product.price,
+
+                stock: product.stock,
+
+                category: product.category,
+
+                image: product.image,
+
+                size: selectedPackSize,
+
+                quantity: quantity
+
+            });
+
+        }
+
+
+        localStorage.setItem(
+            "cart",
+            JSON.stringify(cart)
+        );
+
+
+        updateCartCount();
+
+
+        alert(
+            product.name +
+            " - " +
+            product.color +
+            " - Size " +
+            selectedPackSize +
+            " added to cart!"
+        );
+
+    });
+
+}
+
 
 /*=========================================================
     UPDATE CART COUNT
 =========================================================*/
 
-function updateCartCount(){
+function updateCartCount() {
 
     let total = 0;
 
-    cart.forEach(item=>{
 
-        total += item.quantity;
+    cart.forEach(item => {
+
+        total +=
+            Number(item.quantity) || 0;
 
     });
 
-    cartCount.textContent = total;
+
+    if (cartCount) {
+
+        cartCount.textContent =
+            total;
+
+    }
 
 }
 
+
 /*=========================================================
-    PAGE LOAD
+    INITIAL LOAD
 =========================================================*/
 
-displayProducts(products);
+updateTshirt();
+
+updatePack();
+
 updateCartCount();

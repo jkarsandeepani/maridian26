@@ -1,97 +1,463 @@
-body{
+/* =====================================================
+   ORDER SUCCESS PAGE
+   MARIDIAN '26
+===================================================== */
 
-background:#0a0c0f;
 
-color:white;
+/* =====================================================
+   GLOBAL
+===================================================== */
 
-font-family:Poppins,sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0a0c11;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    background: #000000;
+    padding: 14px 0;
+    border-bottom: 1px solid #171a20;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.logo-title {
+    color: #f4d367;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar .nav-link {
+    color: #ffffff;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: #f4d367;
+}
+
+.navbar .nav-link.active {
+    color: #f4d367;
+}
+
+
+/* =====================================================
+   SUCCESS SECTION
+===================================================== */
+
+.thankyou-section {
+    min-height: calc(100vh - 80px);
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =====================================================
+   SUCCESS CARD
+===================================================== */
+
+.thankyou-card {
+    width: 100%;
+    max-width: 850px;
+    background: #0c0e11;
+    border: 1px solid #171a20;
+    border-radius: 18px;
+    padding: 55px 50px;
+    text-align: center;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =====================================================
+   SUCCESS ICON
+===================================================== */
+
+.success-icon {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 25px;
+    border: 2px solid #f4d367;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-icon i {
+    color: #f4d367;
+    font-size: 45px;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.thankyou-card h1 {
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.thankyou-subtitle {
+    color: #bdbdbd;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.thankyou-subtitle span {
+    color: #f4d367;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   WELCOME MESSAGE
+===================================================== */
+
+.welcome-message {
+    color: #bdbdbd;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.welcome-message strong {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.description {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #bdbdbd;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   ORDER NUMBER
+===================================================== */
+
+.order-number-box {
+    background: #0b0e11;
+    border: 1px solid #f4d367;
+    border-radius: 12px;
+    padding: 18px 25px;
+    margin: 0 auto 35px;
+    max-width: 400px;
+}
+
+.order-number-box small {
+    display: block;
+    color: #bdbdbd;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 7px;
+}
+
+.order-number-box strong {
+    color: #f4d367;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   EVENT / ORDER INFORMATION
+===================================================== */
+
+.event-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.info-item {
+    background: #0b0e11;
+    border: 1px solid #171a20;
+    border-radius: 12px;
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: left;
+}
+
+.info-item i {
+    color: #f4d367;
+    font-size: 25px;
+}
+
+.info-item small {
+    display: block;
+    color: #777777;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.info-item strong {
+    display: block;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   IMPORTANT MESSAGE
+===================================================== */
+
+.important-message {
+    background: rgba(244, 211, 103, 0.06);
+    border: 1px solid rgba(244, 211, 103, 0.25);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    text-align: left;
+    margin-bottom: 35px;
+}
+
+.important-message i {
+    color: #f4d367;
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+.important-message p {
+    color: #bdbdbd;
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.thankyou-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.thankyou-buttons .btn {
+    min-width: 190px;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+
+/* Home Button */
+
+.home-btn {
+    background: #f4d367;
+    color: #0a0c11;
+    border: 1px solid #f4d367;
+}
+
+.home-btn:hover {
+    background: transparent;
+    color: #f4d367;
+    border-color: #f4d367;
+}
+
+
+/* Continue Shopping Button */
+
+.about-btn {
+    background: transparent;
+    color: #f4d367;
+    border: 1px solid #f4d367;
+}
+
+.about-btn:hover {
+    background: #f4d367;
+    color: #0a0c11;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.main-footer {
+    background: #000000;
+    border-top: 1px solid #171a20;
+    padding: 55px 0 20px;
+}
+
+.footer-title {
+    color: #f4d367;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.footer-heading {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.footer-text {
+    color: #bdbdbd;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 9px;
+}
+
+.footer-links a {
+    color: #bdbdbd;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f4d367;
+}
+
+.footer-logo {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #171a20;
+    margin-top: 35px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #777777;
+    font-size: 12px;
+    margin: 0;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .thankyou-section {
+        padding: 50px 15px;
+    }
+
+    .thankyou-card {
+        padding: 40px 25px;
+    }
+
+    .thankyou-card h1 {
+        font-size: 30px;
+    }
+
+    .thankyou-subtitle {
+        font-size: 15px;
+    }
+
+    .event-info {
+        grid-template-columns: 1fr;
+    }
+
+    .info-item {
+        justify-content: flex-start;
+    }
+
+    .order-number-box strong {
+        font-size: 21px;
+    }
+
+    .thankyou-buttons {
+        flex-direction: column;
+    }
+
+    .thankyou-buttons .btn {
+        width: 100%;
+    }
 
 }
 
-.success-section{
 
-min-height:100vh;
+@media (max-width: 480px) {
 
-display:flex;
+    .thankyou-card {
+        padding: 35px 18px;
+        border-radius: 14px;
+    }
 
-align-items:center;
+    .success-icon {
+        width: 70px;
+        height: 70px;
+    }
 
-justify-content:center;
+    .success-icon i {
+        font-size: 36px;
+    }
 
-}
+    .thankyou-card h1 {
+        font-size: 26px;
+    }
 
-.success-card{
+    .description {
+        font-size: 14px;
+    }
 
-background:#0b0d0f;
-
-padding:50px;
-
-border-radius:20px;
-
-text-align:center;
-
-box-shadow:0 20px 40px rgba(0,0,0,.3);
-
-max-width:700px;
-
-width:100%;
-
-}
-
-.success-icon{
-
-font-size:90px;
-
-color:#22c55e;
-
-animation:pop .7s ease;
-
-}
-
-@keyframes pop{
-
-0%{
-
-transform:scale(0);
-
-}
-
-100%{
-
-transform:scale(1);
-
-}
-
-}
-
-.order-box{
-
-background:#111315;
-
-padding:20px;
-
-margin-top:30px;
-
-border-radius:12px;
-
-}
-
-.order-box h2{
-
-color:#f4d367;
-
-font-weight:bold;
-
-margin-top:10px;
-
-}
-
-.btn{
-
-padding:12px 30px;
-
-border-radius:10px;
-
-font-weight:600;
+    .important-message {
+        padding: 15px;
+    }
 
 }

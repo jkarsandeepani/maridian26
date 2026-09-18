@@ -3,79 +3,558 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-<title>Order Successful | MARIDIAN '26 
-</title>
+    <title>Order Confirmed | MARIDIAN '26</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-<link rel="stylesheet" href="../css/style.css">
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-<link rel="stylesheet" href="../css/order-success.css">
+    <!-- Thank You CSS -->
+    <link rel="stylesheet" href="../css/thankyou.css">
 
 </head>
 
+
 <body>
 
-<section class="success-section">
 
-<div class="container">
+    <!-- =====================================================
+                        NAVBAR
+    ====================================================== -->
 
-<div class="success-card">
+    <nav class="navbar navbar-expand-lg navbar-dark">
 
-<div class="success-icon">
+        <div class="container">
 
-<i class="bi bi-check-circle-fill"></i>
+            <!-- Logo -->
 
-</div>
+            <a class="navbar-brand d-flex align-items-center"
+                href="../index.html">
 
-<h1>Order Confirmed!</h1>
+                <img
+                    src="../imagess/logo.jpg"
+                    class="logo me-2"
+                    alt="MARIDIAN Logo">
 
-<p>
+                <div>
 
-Thank you for your purchase.
+                    <h5 class="logo-title m-0">
+                        MARIDIAN'26
+                    </h5>
 
-Your order has been received successfully.
+                </div>
 
-</p>
+            </a>
 
-<div class="order-box">
 
-<h4>Order Number</h4>
+            <!-- Mobile Toggle -->
 
-<h2 id="orderNumber"></h2>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu">
 
-</div>
+                <span class="navbar-toggler-icon"></span>
 
-<div class="mt-4">
+            </button>
 
-<a href="../html/shop.html" class="btn btn-warning me-3">
 
-Continue Shopping
+            <!-- Menu -->
 
-</a>
+            <div
+                class="collapse navbar-collapse"
+                id="navbarMenu">
 
-<a href="../index.html" class="btn btn-outline-light">
+                <ul class="navbar-nav mx-auto">
 
-Return Home
+                    <li class="nav-item">
 
-</a>
+                        <a
+                            class="nav-link"
+                            href="../index.html">
 
-</div>
+                            Home
 
-</div>
+                        </a>
 
-</div>
+                    </li>
 
-</section>
 
-<script src="../js/order-success.js"></script>
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="about.html">
+
+                            About
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link active"
+                            href="maridian.html">
+
+                            MARIDIAN '26
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="team.html">
+
+                            Dream Team
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="contact.html">
+
+                            Contact
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+                    SUCCESS SECTION
+    ====================================================== -->
+
+    <section class="thankyou-section">
+
+        <div class="container">
+
+            <div class="thankyou-card">
+
+
+                <!-- Success Icon -->
+
+                <div class="success-icon">
+
+                    <i class="bi bi-check-lg"></i>
+
+                </div>
+
+
+                <!-- Main Heading -->
+
+                <h1>
+
+                    Order Confirmed!
+
+                </h1>
+
+
+                <p class="thankyou-subtitle">
+
+                    Thank you for your order from
+
+                    <span>
+                        MARIDIAN '26
+                    </span>
+
+                </p>
+
+
+                <!-- Customer Name -->
+
+                <p class="welcome-message">
+
+                    Thank you,
+
+                    <strong id="userName">
+                        Customer
+                    </strong>!
+
+                </p>
+
+
+                <!-- Description -->
+
+                <p class="description">
+
+                    Your order has been successfully
+                    submitted. We have received your
+                    payment receipt and your order is
+                    currently being reviewed.
+
+                </p>
+
+
+                <!-- Order Number -->
+
+                <div class="order-number-box">
+
+                    <small>
+                        ORDER NUMBER
+                    </small>
+
+                    <strong id="orderNumber">
+                        GV-2026-0000
+                    </strong>
+
+                </div>
+
+
+                <!-- Event Information -->
+
+                <div class="event-info">
+
+                    <div class="info-item">
+
+                        <i class="bi bi-box-seam"></i>
+
+                        <div>
+
+                            <small>
+                                ORDER STATUS
+                            </small>
+
+                            <strong>
+                                Payment Pending
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <i class="bi bi-calendar-event"></i>
+
+                        <div>
+
+                            <small>
+                                EVENT DATE
+                            </small>
+
+                            <strong>
+                                06-10-2026
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <i class="bi bi-geo-alt-fill"></i>
+
+                        <div>
+
+                            <small>
+                                VENUE
+                            </small>
+
+                            <strong>
+                                Phase 1 Ground
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Important Message -->
+
+                <div class="important-message">
+
+                    <i class="bi bi-info-circle-fill"></i>
+
+                    <p>
+
+                        Your payment receipt will be checked
+                        by the organizing team. Please keep
+                        your order number for future reference.
+                        You will receive further information
+                        through your email.
+
+                    </p>
+
+                </div>
+
+
+                <!-- Buttons -->
+
+                <div class="thankyou-buttons">
+
+                    <a
+                        href="../index.html"
+                        class="btn home-btn">
+
+                        <i class="bi bi-house-fill me-2"></i>
+
+                        Back to Home
+
+                    </a>
+
+
+                    <a
+                        href="shop.html"
+                        class="btn about-btn">
+
+                        Continue Shopping
+
+                        <i class="bi bi-arrow-right ms-2"></i>
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+                        FOOTER
+    ====================================================== -->
+
+    <footer class="main-footer">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+
+                <!-- Event -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <h3 class="footer-title">
+
+                        MARIDIAN '26
+
+                    </h3>
+
+                    <p class="footer-text">
+
+                        A global cultural experience
+                        connecting people, ideas, and
+                        communities through unforgettable
+                        moments.
+
+                    </p>
+
+                </div>
+
+
+                <!-- Information -->
+
+                <div class="col-lg-2 col-md-6">
+
+                    <h5 class="footer-heading">
+
+                        Information
+
+                    </h5>
+
+                    <ul class="footer-links">
+
+                        <li>
+
+                            <a href="../index.html">
+                                Home
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="about.html">
+                                About
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="team.html">
+                                Dream Team
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="contact.html">
+                                Contact
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- AIESEC NSBM -->
+
+                <div class="col-lg-3 col-md-6 text-center">
+
+                    <h5 class="footer-heading">
+
+                        Organized By
+
+                    </h5>
+
+                    <img
+                        src="../imagess/club-logo.jpg"
+                        class="footer-logo"
+                        alt="AIESEC NSBM">
+
+                    <p class="footer-text">
+
+                        AIESEC IN NSBM
+
+                    </p>
+
+                </div>
+
+
+                <!-- SECTION 4 : AIESEC SRI LANKA -->
+
+                <div class="col-lg-3 col-md-6 text-center">
+
+                    <h5 class="footer-heading">
+
+                        Sponserd By
+
+                    </h5>
+
+                    <img
+                        src="../imagess/aiesec-logo1.png"
+                        class="footer-logo"
+                        alt="AIESEC Sri Lanka">
+
+                    <p class="footer-text">
+
+                        NSBM Green University
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+
+                    © 2026 MARIDIAN '26 | AIESEC NSBM
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Thank You JS -->
+
+    <script>
+
+        /*
+         * Get customer name and order number
+         * saved by payment.js
+         */
+
+        const checkoutData = JSON.parse(
+            localStorage.getItem("checkoutData")
+        );
+
+        const orderNumber = localStorage.getItem(
+            "orderNumber"
+        );
+
+
+        // Display customer name
+
+        if (
+            checkoutData &&
+            checkoutData.customer &&
+            checkoutData.customer.fullName
+        ) {
+
+            document.getElementById("userName").textContent =
+                checkoutData.customer.fullName;
+        }
+
+
+        // Display order number
+
+        if (orderNumber) {
+
+            document.getElementById("orderNumber").textContent =
+                orderNumber;
+
+        }
+
+    </script>
+
 
 </body>
 
-</html>
+</html>s

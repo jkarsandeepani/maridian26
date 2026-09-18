@@ -1,17 +1,8 @@
-/*=========================================================
-    LOAD CART
-=========================================================*/
-
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 const cartItems = document.getElementById("cartItems");
 const subtotal = document.getElementById("subtotal");
 const grandTotal = document.getElementById("grandTotal");
-
-
-/*=========================================================
-    DISPLAY CART
-=========================================================*/
 
 function displayCart() {
 
@@ -19,170 +10,179 @@ function displayCart() {
 
     let total = 0;
 
+    // Empty cart
     if (cart.length === 0) {
 
         cartItems.innerHTML = `
-
-        <div class="text-center py-5">
-
-            <i class="bi bi-cart-x display-1 text-warning"></i>
-
-            <h3 class="mt-3">
-
-                Your cart is empty
-
-            </h3>
-
-            <p>
-
-                Browse our official merchandise.
-
-            </p>
-
-            <a href="shop.html"
-                class="btn btn-warning">
-
-                Continue Shopping
-
-            </a>
-
-        </div>
-
+            <div class="empty-cart text-center">
+                <i class="bi bi-cart-x"></i>
+                <h3>Your cart is empty</h3>
+                <p>Add some products to your cart.</p>
+                <a href="shop.html" class="btn btn-warning">
+                    Continue Shopping
+                </a>
+            </div>
         `;
 
         subtotal.textContent = "Rs. 0";
         grandTotal.textContent = "Rs. 0";
 
         return;
-
     }
 
+    // Display cart items
     cart.forEach(item => {
 
-        total += item.price * item.quantity;
+        const itemTotal =
+            Number(item.price) * Number(item.quantity);
+
+        total += itemTotal;
 
         cartItems.innerHTML += `
+            <div class="cart-item">
 
-        <div class="cart-item">
+                <div class="row align-items-center">
 
-            <div class="row align-items-center">
+                    <!-- Product Image -->
+                    <div class="col-md-3">
 
-                <div class="col-md-3">
+                        <img
+                            src="${item.image}"
+                            class="img-fluid rounded"
+                            alt="${item.name}"
+                        >
 
-                    <img
-                        src="${item.image}"
-                        class="img-fluid rounded">
+                    </div>
 
-                </div>
 
-                <div class="col-md-3">
+                    <!-- Product Details -->
+                    <div class="col-md-3">
 
-                    <h4>${item.name}</h4>
+                        <h4>${item.name}</h4>
 
-${item.size ? `
+                        ${
+                            item.color
+                                ? `
+                                    <p class="mb-1">
+                                        <strong>Color :</strong>
+                                        ${item.color}
+                                    </p>
+                                  `
+                                : ""
+                        }
 
-<p class="mb-1">
+                        ${
+                            item.size
+                                ? `
+                                    <p class="mb-1">
+                                        <strong>Size :</strong>
+                                        ${item.size}
+                                    </p>
+                                  `
+                                : ""
+                        }
 
-<strong>Size :</strong>
+                        ${
+                            item.option
+                                ? `
+                                    <p class="mb-1">
+                                        <strong>Option :</strong>
+                                        ${item.option}
+                                    </p>
+                                  `
+                                : ""
+                        }
 
-${item.size}
+                        <p class="text-warning">
+                            Rs. ${Number(item.price).toLocaleString()}
+                        </p>
 
-</p>
+                    </div>
 
-` : ""}
 
-<p class="text-warning">
+                    <!-- Quantity -->
+                    <div class="col-md-3 text-center">
 
-Rs. ${item.price.toLocaleString()}
+                        <button
+                            class="btn btn-warning btn-sm"
+                            onclick="changeQuantity(
+                                '${item.cartItemId}',
+                                -1
+                            )"
+                        >
+                            -
+                        </button>
 
-</p>
+                        <span class="mx-3 fw-bold">
+                            ${item.quantity}
+                        </span>
 
-                </div>
+                        <button
+                            class="btn btn-warning btn-sm"
+                            onclick="changeQuantity(
+                                '${item.cartItemId}',
+                                1
+                            )"
+                        >
+                            +
+                        </button>
 
-                <div class="col-md-3 text-center">
+                    </div>
 
-                    <button
-                        class="btn btn-warning btn-sm"
-                         onclick="changeQuantity(${item.id},'${item.size}',-1)" -1)">
 
-                        -
+                    <!-- Item Total -->
+                    <div class="col-md-2 text-center">
 
-                    </button>
+                        <strong>
+                            Rs. ${itemTotal.toLocaleString()}
+                        </strong>
 
-                    <span class="mx-3 fw-bold">
+                    </div>
 
-                        ${item.quantity}
 
-                    </span>
+                    <!-- Delete -->
+                    <div class="col-md-1 text-center">
 
-                    <button
-                        class="btn btn-warning btn-sm"
-                        onclick="changeQuantity(${item.id},'${item.size}',1)"1)"">
+                        <button
+                            class="btn btn-danger btn-sm"
+                            onclick="removeItem(
+                                '${item.cartItemId}'
+                            )"
+                        >
+                            <i class="bi bi-trash-fill"></i>
+                        </button>
 
-                        +
-
-                    </button>
-
-                </div>
-
-                <div class="col-md-2 text-center">
-
-                    <strong>
-
-                        Rs. ${(item.price * item.quantity).toLocaleString()}
-
-                    </strong>
-
-                </div>
-
-                <div class="col-md-1 text-center">
-
-                    <button
-                        class="btn btn-danger btn-sm"
-                       onclick="removeItem(${item.id},'${item.size}')"">
-
-                        <i class="bi bi-trash-fill"></i>
-
-                    </button>
+                    </div>
 
                 </div>
 
             </div>
-
-        </div>
-
         `;
-
     });
 
-    subtotal.textContent = "Rs. " + total.toLocaleString();
 
-    grandTotal.textContent = "Rs. " + total.toLocaleString();
+    // Update totals
+    subtotal.textContent =
+        "Rs. " + total.toLocaleString();
 
+    grandTotal.textContent =
+        "Rs. " + total.toLocaleString();
 }
 
 
-/*=========================================================
-    REMOVE ITEM
-=========================================================*/
+// Remove item
+window.removeItem = function(cartItemId) {
 
-window.removeItem = function (id, size) {
-
-    const confirmDelete = confirm(
-        "Remove this product from the cart?"
-    );
+    const confirmDelete =
+        confirm("Remove this product from the cart?");
 
     if (!confirmDelete) {
-
         return;
-
     }
-     cart = cart.filter(item =>
 
-!(item.id === id && item.size === size)
-
-);
-   
+    cart = cart.filter(
+        item => item.cartItemId !== cartItemId
+    );
 
     localStorage.setItem(
         "cart",
@@ -190,35 +190,32 @@ window.removeItem = function (id, size) {
     );
 
     displayCart();
-
 };
 
 
-/*=========================================================
-    CHANGE QUANTITY
-=========================================================*/
+// Change quantity
+window.changeQuantity = function(cartItemId, change) {
 
-window.changeQuantity = function (id, size, change) {
-
-    const product = cart.find(item =>
-
-item.id === id && item.size === size
-
-);
+    const product = cart.find(
+        item => item.cartItemId === cartItemId
+    );
 
     if (!product) {
-
         return;
-
     }
 
-    product.quantity += change;
+    product.quantity =
+        Number(product.quantity) + Number(change);
 
+
+    // Remove when quantity becomes 0
     if (product.quantity <= 0) {
 
-        cart = cart.filter(item => item.id !== id);
-
+        cart = cart.filter(
+            item => item.cartItemId !== cartItemId
+        );
     }
+
 
     localStorage.setItem(
         "cart",
@@ -226,12 +223,8 @@ item.id === id && item.size === size
     );
 
     displayCart();
-
 };
 
 
-/*=========================================================
-    PAGE LOAD
-=========================================================*/
-
+// Load cart when page opens
 displayCart();

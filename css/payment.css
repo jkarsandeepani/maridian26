@@ -1,247 +1,347 @@
-/*=========================================================
-    GLOBAL
-=========================================================*/
+/* ================================
+   PAYMENT PAGE
+================================ */
 
-body{
-
-    background:#0b0c0f;
-
-    color:#ffffff;
-
-    font-family:'Poppins',sans-serif;
-
+body {
+    background: #0a0c11;
+    color: white;
 }
 
-/*=========================================================
-    HEADER
-=========================================================*/
 
-.payment-header{
+/* ================================
+   PAYMENT HEADER
+================================ */
 
-    padding:140px 0 70px;
-
-    background:linear-gradient(135deg,#0e0f10,#0f1011);
-
-    text-align:center;
-
+.payment-header {
+    padding: 140px 0 60px;
+    background: black;
 }
 
-.payment-header h1{
-
-    font-size:3rem;
-
-    font-weight:700;
-
-    margin-bottom:10px;
-
+.payment-header h1 {
+    color: white;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
-.payment-header p{
-
-    color:#cbd5e1;
-
-    font-size:1.1rem;
-
+.payment-header p {
+    color: #bdbdbd;
+    margin-bottom: 0;
 }
 
-/*=========================================================
-    PAYMENT CARD
-=========================================================*/
 
-.payment-card{
+/* ================================
+   PAYMENT CARD
+================================ */
 
-    background:#101216;
-
-    border-radius:20px;
-
-    padding:30px;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.25);
-
-    height:100%;
-
+.payment-card {
+    background: #0c0e11;
+    border-radius: 15px;
+    padding: 30px;
+    border: 1px solid #171a20;
 }
 
-/*=========================================================
-    CARD TITLES
-=========================================================*/
 
-.payment-card h3{
+/* ================================
+   TITLES
+================================ */
 
-    font-weight:700;
-
-    margin-bottom:20px;
-
+.payment-title {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
-.payment-card h3 i{
-
-    color:#f4d367;
-
-    margin-right:10px;
-
+.payment-title i {
+    color: #f4d367;
+    margin-right: 8px;
 }
 
-/*=========================================================
-    CUSTOMER DETAILS
-=========================================================*/
 
-.payment-card p{
+/* ================================
+   HORIZONTAL LINE
+================================ */
 
-    margin-bottom:16px;
-
-    color:#e2e8f0;
-
-    font-size:1rem;
-
+.payment-card hr {
+    border-color: #292d34;
+    opacity: 1;
+    margin: 20px 0;
 }
 
-.payment-card strong{
 
-    color:#ffffff;
+/* ================================
+   CUSTOMER INFORMATION
+================================ */
 
+.customer-info p,
+.bank-details p {
+    color: #bdbdbd;
+    margin-bottom: 10px;
 }
 
-/*=========================================================
-    ORDER SUMMARY
-=========================================================*/
-
-#paymentSummary{
-
-    max-height:350px;
-
-    overflow-y:auto;
-
-    padding-right:5px;
-
+.customer-info strong,
+.bank-details strong {
+    color: white;
 }
 
-.order-item{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:14px 0;
-
-    border-bottom:1px solid rgba(255,255,255,.08);
-
+.customer-info span {
+    color: #bdbdbd;
 }
 
-.order-item:last-child{
 
-    border-bottom:none;
+/* ================================
+   ORDER ITEM
+================================ */
 
+.order-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #171a20;
 }
 
-.order-name{
-
-    font-weight:600;
-
+.order-item:last-child {
+    border-bottom: none;
 }
 
-.order-qty{
 
-    font-size:.9rem;
+/* Product Information */
 
-    color:#94a3b8;
-
+.order-item-info {
+    flex: 1;
 }
 
-.order-price{
-
-    color:#f4d367;
-
-    font-weight:700;
-
+.order-name {
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 5px;
 }
 
-/*=========================================================
-    TOTAL
-=========================================================*/
-
-#paymentTotal{
-
-    color:#22c55e;
-
-    font-size:1.6rem;
-
-    font-weight:700;
-
+.order-detail {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 3px;
 }
 
-/*=========================================================
-    BUTTON
-=========================================================*/
 
-.btn-warning{
+/* Product Price */
 
-    background:#f4d367;
-
-    border:none;
-
-    color:#111827;
-
-    font-weight:700;
-
-    padding:14px;
-
-    border-radius:12px;
-
-    transition:.3s;
-
+.order-price {
+    color: #f4d367;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
-.btn-warning:hover{
 
-    transform:translateY(-3px);
+/* ================================
+   TOTAL
+================================ */
 
-    box-shadow:0 12px 25px rgba(250,204,21,.35);
-
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/*=========================================================
-    SCROLLBAR
-=========================================================*/
-
-#paymentSummary::-webkit-scrollbar{
-
-    width:6px;
-
+.total-row strong:first-child {
+    color: white;
+    font-size: 18px;
 }
 
-#paymentSummary::-webkit-scrollbar-thumb{
-
-    background:#101214;
-
-    border-radius:10px;
-
+#paymentTotal {
+    color: #f4d367;
+    font-size: 24px;
 }
 
-/*=========================================================
-    RESPONSIVE
-=========================================================*/
 
-@media(max-width:768px){
+/* ================================
+   BANK DETAILS
+================================ */
 
-    .payment-header{
+.payment-alert {
+    background: #17150c;
+    color: #f4d367;
+    border: 1px solid #4a4020;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+}
 
-        padding:120px 0 50px;
+.payment-alert i {
+    margin-right: 7px;
+}
 
+
+/* ================================
+   FILE UPLOAD
+================================ */
+
+.form-label {
+    color: white;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    background: #0a0c11;
+    color: white;
+    border: 1px solid #252932;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.form-control:focus {
+    background: #0a0c11;
+    color: white;
+    border-color: #f4d367;
+    box-shadow: 0 0 0 0.2rem rgba(244, 211, 103, 0.15);
+}
+
+.form-control::file-selector-button {
+    background: #f4d367;
+    color: #0a0c11;
+    border: none;
+    padding: 8px 12px;
+    margin-right: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+
+/* File Information */
+
+.file-info {
+    display: block;
+    color: #999;
+    margin-top: 8px;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   PAYMENT PREVIEW
+================================ */
+
+#previewImage {
+    display: none;
+    max-width: 300px;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 15px;
+    border: 1px solid #252932;
+}
+
+
+/* ================================
+   CHECKBOX
+================================ */
+
+.form-check {
+    color: #bdbdbd;
+}
+
+.form-check-input {
+    background-color: #0a0c11;
+    border-color: #555;
+}
+
+.form-check-input:checked {
+    background-color: #f4d367;
+    border-color: #f4d367;
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.2rem rgba(244, 211, 103, 0.15);
+}
+
+.form-check-label {
+    cursor: pointer;
+}
+
+
+/* ================================
+   CONFIRM ORDER BUTTON
+================================ */
+
+#placeOrder {
+    background: #f4d367;
+    color: #0a0c11;
+    border: none;
+    border-radius: 10px;
+    padding: 13px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+#placeOrder:hover {
+    background: white;
+    color: #0a0c11;
+}
+
+#placeOrder:disabled {
+    background: #555;
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 767px) {
+
+    .payment-header {
+        padding: 120px 0 50px;
     }
 
-    .payment-header h1{
-
-        font-size:2.2rem;
-
+    .payment-header h1 {
+        font-size: 32px;
     }
 
-    .payment-card{
+    .payment-card {
+        padding: 22px;
+    }
 
-        margin-bottom:25px;
+    .payment-title {
+        font-size: 21px;
+    }
 
+    .order-item {
+        gap: 10px;
+    }
+
+    .order-name {
+        font-size: 15px;
+    }
+
+    .order-price {
+        font-size: 14px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .payment-header {
+        padding: 110px 0 40px;
+    }
+
+    .payment-header h1 {
+        font-size: 28px;
+    }
+
+    .payment-card {
+        padding: 18px;
+    }
+
+    #paymentTotal {
+        font-size: 20px;
     }
 
 }
