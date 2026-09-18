@@ -24,7 +24,7 @@ const tshirtOptions = [
         name: "Official T-Shirt",
         option: "White",
         color: "White",
-        price: 1890,
+        price: 1899,
         stock: 50,
         category: "Clothing",
         image: "../imagess/4.jpg"
